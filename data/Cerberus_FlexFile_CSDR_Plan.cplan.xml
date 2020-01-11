@@ -1,0 +1,1518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<csdr:Document xsi:type="PlanDocument" xmlns="urn:us:mil:osd:pae:dcarc:csdr:2019:plans" xmlns:csdr="urn:us:mil:osd:pae:dcarc:csdr:2011" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:x1="urn:us:mil:osd:pae:dcarc:csdr:2019:03:extensions:plans" xmlns:cpet1="urn:us:mil:osd:pae:dcarc:csdr:2011:06:extensions:cpet">
+  <csdr:DocumentInfo>
+    <cpet1:DocumentInfo>
+      <cpet1:DocumentID>c5c62ef1-d589-4798-ad05-5080e9cf5f5e</cpet1:DocumentID>
+      <cpet1:ParentDocumentID xsi:nil="true" />
+    </cpet1:DocumentInfo>
+  </csdr:DocumentInfo>
+  <Metadata>
+    <ProgramName>Cerberus Autonomous Vehicle Program</ProgramName>
+    <PhasesOrMilestones>
+      <PhaseOrMilestone>C-LRIP</PhaseOrMilestone>
+      <PhaseOrMilestone>C-FRP</PhaseOrMilestone>
+    </PhasesOrMilestones>
+    <PrimeMissionProduct>Cerberus Autonomous Vehicles</PrimeMissionProduct>
+    <AcquisitionCategory>ACAT I</AcquisitionCategory>
+    <CommodityType>GROUND VEHICLE SYSTEM</CommodityType>
+    <PlanIterationType>INITIAL</PlanIterationType>
+    <CurrentSubmissionDate xsi:nil="true" />
+    <LastApprovedPlanDate xsi:nil="true" />
+    <PointOfContact>
+      <Name>Deeare, Cezar</Name>
+      <Address xsi:nil="true" />
+      <TelephoneNumber>5551234567</TelephoneNumber>
+      <EmailAddress>Cezar.Deeare@programoffice.mil</EmailAddress>
+    </PointOfContact>
+    <PlanType>CONTRACT / PRIME</PlanType>
+    <PreparingOrganization>Cerberus Autonomous Vehicle Program Office</PreparingOrganization>
+    <ContractorNameAndAddress>
+      <OrganizationName>Con-Tractor, LLC</OrganizationName>
+      <DivisionName xsi:nil="true" />
+      <Location xsi:nil="true" />
+    </ContractorNameAndAddress>
+    <ContractNumber>W123D4-56-P-7890</ContractNumber>
+    <AppropriationTypes>
+      <AppropriationType>PROCUREMENT</AppropriationType>
+    </AppropriationTypes>
+    <ApprovedPlanNumber>Z-99-C1</ApprovedPlanNumber>
+    <ApprovedPlanRevisionNumber xsi:nil="true" />
+    <x1:PointOfContactStructuredAddress>
+      <x1:Street>5000 Manual Ave.
+Suite 04
+</x1:Street>
+      <x1:City>District of Columbia</x1:City>
+      <x1:State>DC</x1:State>
+      <x1:ZipCode>20301-1800</x1:ZipCode>
+    </x1:PointOfContactStructuredAddress>
+    <x1:ContractorLocationStructuredAddress>
+      <x1:Street>57th Street</x1:Street>
+      <x1:City>New New York</x1:City>
+      <x1:State>NY</x1:State>
+      <x1:ZipCode>10019</x1:ZipCode>
+    </x1:ContractorLocationStructuredAddress>
+  </Metadata>
+  <ReportingStructure>
+    <Elements>
+      <Element>
+        <ID>1.0</ID>
+        <Code>1.0</Code>
+        <Name>Cerberus Autonomous Vehicles</Name>
+        <ChildElements>
+          <Element>
+            <ID>1.1</ID>
+            <Code>1.1</Code>
+            <Name>Family of Cerberus Autonomous Vehicle</Name>
+            <ChildElements>
+              <Element>
+                <ID>1.1.1</ID>
+                <Code>1.1.1</Code>
+                <Name>Cerberus Autonomous Vehicle (CAV)</Name>
+                <ChildElements>
+                  <Element>
+                    <ID>1.1.1.1</ID>
+                    <Code>1.1.1.1</Code>
+                    <Name>CAV Integration, Assembly, Test, and Checkout</Name>
+                  </Element>
+                  <Element>
+                    <ID>1.1.1.2</ID>
+                    <Code>1.1.1.2</Code>
+                    <Name>Hull/Frame/Body/Cab</Name>
+                  </Element>
+                  <Element>
+                    <ID>1.1.1.3</ID>
+                    <Code>1.1.1.3</Code>
+                    <Name>System Survivability</Name>
+                  </Element>
+                  <Element>
+                    <ID>1.1.1.4</ID>
+                    <Code>1.1.1.4</Code>
+                    <Name>Turret Assembly</Name>
+                  </Element>
+                  <Element>
+                    <ID>1.1.1.5</ID>
+                    <Code>1.1.1.5</Code>
+                    <Name>Suspension/Steering</Name>
+                  </Element>
+                  <Element>
+                    <ID>1.1.1.6</ID>
+                    <Code>1.1.1.6</Code>
+                    <Name>Vehicle Electronics</Name>
+                  </Element>
+                  <Element>
+                    <ID>1.1.1.7</ID>
+                    <Code>1.1.1.7</Code>
+                    <Name>Power Package/Drive Train</Name>
+                    <ChildElements>
+                      <Element>
+                        <ID>1.1.1.7.1</ID>
+                        <Code>1.1.1.7.1</Code>
+                        <Name>Power Package</Name>
+                        <ChildElements>
+                          <Element>
+                            <ID>1.1.1.7.1.1</ID>
+                            <Code>1.1.1.7.1.1</Code>
+                            <Name>Dressed Engine</Name>
+                            <ChildElements>
+                              <Element>
+                                <ID>1.1.1.7.1.1.1</ID>
+                                <Code>1.1.1.7.1.1.1</Code>
+                                <Name>Engine Block</Name>
+                              </Element>
+                              <Element>
+                                <ID>1.1.1.7.1.1.2</ID>
+                                <Code>1.1.1.7.1.1.2</Code>
+                                <Name>Turbocharger</Name>
+                              </Element>
+                              <Element>
+                                <ID>1.1.1.7.1.1.3</ID>
+                                <Code>1.1.1.7.1.1.3</Code>
+                                <Name>Other Dressed Engine</Name>
+                              </Element>
+                            </ChildElements>
+                          </Element>
+                          <Element>
+                            <ID>1.1.1.7.1.2</ID>
+                            <Code>1.1.1.7.1.2</Code>
+                            <Name>Transmission</Name>
+                          </Element>
+                        </ChildElements>
+                      </Element>
+                      <Element>
+                        <ID>1.1.1.7.2</ID>
+                        <Code>1.1.1.7.2</Code>
+                        <Name>Drive Train</Name>
+                      </Element>
+                    </ChildElements>
+                  </Element>
+                  <Element>
+                    <ID>1.1.1.8</ID>
+                    <Code>1.1.1.8</Code>
+                    <Name>Auxiliary Automotive</Name>
+                  </Element>
+                  <Element>
+                    <ID>1.1.1.9</ID>
+                    <Code>1.1.1.9</Code>
+                    <Name>Fire Control</Name>
+                  </Element>
+                  <Element>
+                    <ID>1.1.1.10</ID>
+                    <Code>1.1.1.10</Code>
+                    <Name>Armament</Name>
+                  </Element>
+                  <Element>
+                    <ID>1.1.1.11</ID>
+                    <Code>1.1.1.11</Code>
+                    <Name>Automatic Ammunition Handling</Name>
+                  </Element>
+                  <Element>
+                    <ID>1.1.1.12</ID>
+                    <Code>1.1.1.12</Code>
+                    <Name>Navigation and Remote Piloting Systems</Name>
+                  </Element>
+                  <Element>
+                    <ID>1.1.1.13</ID>
+                    <Code>1.1.1.13</Code>
+                    <Name>Special Equipment</Name>
+                  </Element>
+                  <Element>
+                    <ID>1.1.1.14</ID>
+                    <Code>1.1.1.14</Code>
+                    <Name>Communications</Name>
+                  </Element>
+                  <Element>
+                    <ID>1.1.1.15</ID>
+                    <Code>1.1.1.15</Code>
+                    <Name>CAV Software Release</Name>
+                  </Element>
+                  <Element>
+                    <ID>1.1.1.16</ID>
+                    <Code>1.1.1.16</Code>
+                    <Name>Other CAV Subsystems</Name>
+                  </Element>
+                </ChildElements>
+              </Element>
+              <Element>
+                <ID>1.1.2</ID>
+                <Code>1.1.2</Code>
+                <Name>Variant 2 (Deprecated)</Name>
+              </Element>
+              <Element>
+                <ID>1.1.3</ID>
+                <Code>1.1.3</Code>
+                <Name>Equipment Kits</Name>
+              </Element>
+            </ChildElements>
+          </Element>
+          <Element>
+            <ID>1.2</ID>
+            <Code>1.2</Code>
+            <Name>Secondary Vehicle</Name>
+          </Element>
+          <Element>
+            <ID>1.3</ID>
+            <Code>1.3</Code>
+            <Name>Systems Engineering</Name>
+            <ChildElements>
+              <Element>
+                <ID>1.3.1</ID>
+                <Code>1.3.1</Code>
+                <Name>Software Systems Engineering</Name>
+              </Element>
+              <Element>
+                <ID>1.3.2</ID>
+                <Code>1.3.2</Code>
+                <Name>Integrated Logistics Support (ILS) Systems Engineering</Name>
+              </Element>
+              <Element>
+                <ID>1.3.3</ID>
+                <Code>1.3.3</Code>
+                <Name>Cybersecurity Systems Engineering</Name>
+              </Element>
+              <Element>
+                <ID>1.3.4</ID>
+                <Code>1.3.4</Code>
+                <Name>Core Systems Engineering</Name>
+              </Element>
+              <Element>
+                <ID>1.3.5</ID>
+                <Code>1.3.5</Code>
+                <Name>Other Systems Engineering 1...n (Specify)</Name>
+              </Element>
+            </ChildElements>
+          </Element>
+          <Element>
+            <ID>1.4</ID>
+            <Code>1.4</Code>
+            <Name>Program Management</Name>
+            <ChildElements>
+              <Element>
+                <ID>1.4.1</ID>
+                <Code>1.4.1</Code>
+                <Name>Software Program Management</Name>
+              </Element>
+              <Element>
+                <ID>1.4.2</ID>
+                <Code>1.4.2</Code>
+                <Name>Integrated Logistics Support (ILS) Program Management</Name>
+              </Element>
+              <Element>
+                <ID>1.4.3</ID>
+                <Code>1.4.3</Code>
+                <Name>Cybersecurity Management</Name>
+              </Element>
+              <Element>
+                <ID>1.4.4</ID>
+                <Code>1.4.4</Code>
+                <Name>Core Program Management</Name>
+              </Element>
+              <Element>
+                <ID>1.4.5</ID>
+                <Code>1.4.5</Code>
+                <Name>Other Program Management 1...n (Specify)</Name>
+              </Element>
+            </ChildElements>
+          </Element>
+          <Element>
+            <ID>1.5</ID>
+            <Code>1.5</Code>
+            <Name>System Test and Evaluation</Name>
+            <ChildElements>
+              <Element>
+                <ID>1.5.1</ID>
+                <Code>1.5.1</Code>
+                <Name>Development Test and Evaluation</Name>
+              </Element>
+              <Element>
+                <ID>1.5.2</ID>
+                <Code>1.5.2</Code>
+                <Name>Operational Test and Evaluation</Name>
+              </Element>
+              <Element>
+                <ID>1.5.3</ID>
+                <Code>1.5.3</Code>
+                <Name>Cybersecurity Test and Evaluation</Name>
+              </Element>
+              <Element>
+                <ID>1.5.4</ID>
+                <Code>1.5.4</Code>
+                <Name>Mock-ups/System Integration Labs (SILs)</Name>
+              </Element>
+              <Element>
+                <ID>1.5.5</ID>
+                <Code>1.5.5</Code>
+                <Name>Test and Evaluation Support</Name>
+              </Element>
+              <Element>
+                <ID>1.5.6</ID>
+                <Code>1.5.6</Code>
+                <Name>Test Facilities</Name>
+              </Element>
+            </ChildElements>
+          </Element>
+          <Element>
+            <ID>1.6</ID>
+            <Code>1.6</Code>
+            <Name>Training</Name>
+            <ChildElements>
+              <Element>
+                <ID>1.6.1</ID>
+                <Code>1.6.1</Code>
+                <Name>Equipment</Name>
+                <ChildElements>
+                  <Element>
+                    <ID>1.6.1.1</ID>
+                    <Code>1.6.1.1</Code>
+                    <Name>Operator Instructional Equipment</Name>
+                  </Element>
+                  <Element>
+                    <ID>1.6.1.2</ID>
+                    <Code>1.6.1.2</Code>
+                    <Name>Maintainer Instructional Equipment</Name>
+                  </Element>
+                </ChildElements>
+              </Element>
+              <Element>
+                <ID>1.6.2</ID>
+                <Code>1.6.2</Code>
+                <Name>Services</Name>
+                <ChildElements>
+                  <Element>
+                    <ID>1.6.2.1</ID>
+                    <Code>1.6.2.1</Code>
+                    <Name>Operator Instructional Services</Name>
+                  </Element>
+                  <Element>
+                    <ID>1.6.2.2</ID>
+                    <Code>1.6.2.2</Code>
+                    <Name>Maintainer Instructional Services</Name>
+                  </Element>
+                </ChildElements>
+              </Element>
+              <Element>
+                <ID>1.6.3</ID>
+                <Code>1.6.3</Code>
+                <Name>Facilities</Name>
+              </Element>
+              <Element>
+                <ID>1.6.4</ID>
+                <Code>1.6.4</Code>
+                <Name>Training Software 1...n (Specify)</Name>
+              </Element>
+            </ChildElements>
+          </Element>
+          <Element>
+            <ID>1.7</ID>
+            <Code>1.7</Code>
+            <Name>Data</Name>
+            <ChildElements>
+              <Element>
+                <ID>1.7.1</ID>
+                <Code>1.7.1</Code>
+                <Name>Data Deliverables 1...n (Specify)</Name>
+              </Element>
+              <Element>
+                <ID>1.7.2</ID>
+                <Code>1.7.2</Code>
+                <Name>Data Repository</Name>
+              </Element>
+              <Element>
+                <ID>1.7.3</ID>
+                <Code>1.7.3</Code>
+                <Name>Data Rights 1...n (Specify)</Name>
+              </Element>
+            </ChildElements>
+          </Element>
+          <Element>
+            <ID>1.8</ID>
+            <Code>1.8</Code>
+            <Name>Peculiar Support Equipment</Name>
+            <ChildElements>
+              <Element>
+                <ID>1.8.1</ID>
+                <Code>1.8.1</Code>
+                <Name>Test and Measurement Equipment</Name>
+              </Element>
+              <Element>
+                <ID>1.8.2</ID>
+                <Code>1.8.2</Code>
+                <Name>Support and Handling Equipment</Name>
+              </Element>
+            </ChildElements>
+          </Element>
+          <Element>
+            <ID>1.9</ID>
+            <Code>1.9</Code>
+            <Name>Common Support Equipment</Name>
+            <ChildElements>
+              <Element>
+                <ID>1.9.1</ID>
+                <Code>1.9.1</Code>
+                <Name>Test and Measurement Equipment</Name>
+              </Element>
+              <Element>
+                <ID>1.9.2</ID>
+                <Code>1.9.2</Code>
+                <Name>Support and Handling Equipment</Name>
+              </Element>
+            </ChildElements>
+          </Element>
+          <Element>
+            <ID>1.10</ID>
+            <Code>1.10</Code>
+            <Name>Operational/Site Activation by Site 1...n (Specify)</Name>
+            <ChildElements>
+              <Element>
+                <ID>1.10.1</ID>
+                <Code>1.10.1</Code>
+                <Name>System Assembly, Installation, and Checkout on Site</Name>
+              </Element>
+              <Element>
+                <ID>1.10.2</ID>
+                <Code>1.10.2</Code>
+                <Name>Contractor Technical Support</Name>
+              </Element>
+              <Element>
+                <ID>1.10.3</ID>
+                <Code>1.10.3</Code>
+                <Name>Site Construction</Name>
+              </Element>
+              <Element>
+                <ID>1.10.4</ID>
+                <Code>1.10.4</Code>
+                <Name>Site/Ship/Vehicle Conversion</Name>
+              </Element>
+              <Element>
+                <ID>1.10.5</ID>
+                <Code>1.10.5</Code>
+                <Name>Interim Contractor Support (ICS)</Name>
+              </Element>
+            </ChildElements>
+          </Element>
+          <Element>
+            <ID>1.11</ID>
+            <Code>1.11</Code>
+            <Name>Contractor Logistics Support (CLS)</Name>
+          </Element>
+          <Element>
+            <ID>1.12</ID>
+            <Code>1.12</Code>
+            <Name>Industrial Facilities</Name>
+            <ChildElements>
+              <Element>
+                <ID>1.12.1</ID>
+                <Code>1.12.1</Code>
+                <Name>Construction/Conversion/Expansion</Name>
+              </Element>
+              <Element>
+                <ID>1.12.2</ID>
+                <Code>1.12.2</Code>
+                <Name>Equipment Acquisition or Modernization</Name>
+              </Element>
+              <Element>
+                <ID>1.12.3</ID>
+                <Code>1.12.3</Code>
+                <Name>Maintenance (Industrial Facilities)</Name>
+              </Element>
+            </ChildElements>
+          </Element>
+          <Element>
+            <ID>1.13</ID>
+            <Code>1.13</Code>
+            <Name>Initial Spares and Repair Parts</Name>
+          </Element>
+        </ChildElements>
+      </Element>
+    </Elements>
+  </ReportingStructure>
+  <ReportingRequirementsTable>
+    <ContractLevelReportingRequirements>
+      <ReportingRequirements>
+        <ReportingRequirement>1921-3</ReportingRequirement>
+        <ReportingRequirement>FAC BY STANDARD FUNCTIONAL CATEGORY</ReportingRequirement>
+        <ReportingRequirement>FAC BY NONRECURRING / RECURRING</ReportingRequirement>
+        <ReportingRequirement>TECHNICAL DATA</ReportingRequirement>
+        <ReportingRequirement>COST DATA REPORTED AS FLEX FILE</ReportingRequirement>
+      </ReportingRequirements>
+    </ContractLevelReportingRequirements>
+    <ReportingRequirements>
+      <DataItem>
+        <ReportingElementID>1.5.3</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.7.2</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.6.1.2</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.6.2.1</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.6.4</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.6.2.2</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.6.1.1</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.5.6</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.5.5</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.5.2</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.4.5</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.4.3</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.5.1</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.4.4</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.4.1</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.3.5</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.5.4</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.3.3</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.4.2</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.3.1</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.3.4</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.2</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.1.3</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+          <ReportingRequirement>QUANTITY DATA</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.1.1.14</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+          <ReportingRequirement>QUANTITY DATA</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.1.1.16</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+          <ReportingRequirement>QUANTITY DATA</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.1.1.15</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+          <ReportingRequirement>QUANTITY DATA</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.1.1.13</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+          <ReportingRequirement>QUANTITY DATA</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.1.1.7.2</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+          <ReportingRequirement>QUANTITY DATA</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.1.2</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+          <ReportingRequirement>QUANTITY DATA</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.1.1.9</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+          <ReportingRequirement>QUANTITY DATA</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.1.1.11</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+          <ReportingRequirement>QUANTITY DATA</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.1.1.8</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+          <ReportingRequirement>QUANTITY DATA</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.1.1.7.1.1.2</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+          <ReportingRequirement>QUANTITY DATA</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.3.2</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.6.3</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.7.1</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.7.3</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.8.1</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.8.2</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.1.1.7.1.2</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+          <ReportingRequirement>QUANTITY DATA</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.1.1.7.1.1.3</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+          <ReportingRequirement>QUANTITY DATA</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.1.1.7.1.1.1</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+          <ReportingRequirement>QUANTITY DATA</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.1.1.7.1.1</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>QUANTITY DATA</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.1.1.4</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+          <ReportingRequirement>QUANTITY DATA</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.1.1.6</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+          <ReportingRequirement>QUANTITY DATA</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.1.1.5</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+          <ReportingRequirement>QUANTITY DATA</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.1.1.7</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+          <ReportingRequirement>QUANTITY DATA</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.1.1.7.1</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>QUANTITY DATA</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.1.1.3</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+          <ReportingRequirement>QUANTITY DATA</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.1.1.2</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+          <ReportingRequirement>QUANTITY DATA</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.1.1.1</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+          <ReportingRequirement>QUANTITY DATA</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.1.1.12</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+          <ReportingRequirement>QUANTITY DATA</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.1.1.10</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+          <ReportingRequirement>QUANTITY DATA</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.9.1</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.9.2</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.10.1</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.10.2</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.10.3</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.10.4</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.10.5</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.11</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.12.1</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.12.2</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.12.3</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <ReportingElementID>1.13</ReportingElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+    </ReportingRequirements>
+    <SummaryReportingRequirements>
+      <DataItem>
+        <SummaryElementID>SUBTOTAL COST</SummaryElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <SummaryElementID>GENERAL AND ADMINISTRATIVE</SummaryElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <SummaryElementID>UNDISTRIBUTED BUDGET</SummaryElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <SummaryElementID>MANAGEMENT RESERVE</SummaryElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <SummaryElementID>FACILITIES CAPITAL COST OF MONEY</SummaryElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <SummaryElementID>TOTAL COST</SummaryElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <SummaryElementID>PROFIT / LOSS / FEE</SummaryElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+      <DataItem>
+        <SummaryElementID>TOTAL PRICE</SummaryElementID>
+        <ReportingRequirements>
+          <ReportingRequirement>COST DATA / FORECAST AT COMPLETION</ReportingRequirement>
+          <ReportingRequirement>COST DATA / ACTUAL TO DATE</ReportingRequirement>
+        </ReportingRequirements>
+      </DataItem>
+    </SummaryReportingRequirements>
+  </ReportingRequirementsTable>
+  <SubmissionTable>
+    <Submissions>
+      <Submission>
+        <ID>3ab3b6fc</ID>
+        <SubmissionNumber>1</SubmissionNumber>
+        <EventName>Contract Award</EventName>
+        <ReportCycle>INITIAL</ReportCycle>
+        <AsOfDate>2020-01-01</AsOfDate>
+        <DueDate>2020-03-02</DueDate>
+      </Submission>
+      <Submission>
+        <ID>63d3b315</ID>
+        <SubmissionNumber>2</SubmissionNumber>
+        <EventName>Contract Award</EventName>
+        <ReportCycle>INITIAL</ReportCycle>
+        <AsOfDate>2020-01-01</AsOfDate>
+        <DueDate>2020-03-02</DueDate>
+      </Submission>
+      <Submission>
+        <ID>7ff99ffb</ID>
+        <SubmissionNumber>3</SubmissionNumber>
+        <EventName>Delivery of all First Article Test Vehicles</EventName>
+        <ReportCycle>INTERIM</ReportCycle>
+        <AsOfDate>2020-08-31</AsOfDate>
+        <DueDate>2020-10-31</DueDate>
+      </Submission>
+      <Submission>
+        <ID>479f4fb7</ID>
+        <SubmissionNumber>4</SubmissionNumber>
+        <EventName>Delivery of all First Article Test Vehicles</EventName>
+        <ReportCycle>INTERIM</ReportCycle>
+        <AsOfDate>2020-08-31</AsOfDate>
+        <DueDate>2020-10-31</DueDate>
+      </Submission>
+      <Submission>
+        <ID>47bf4bde</ID>
+        <SubmissionNumber>5</SubmissionNumber>
+        <EventName>Complete LRIP Deliveries</EventName>
+        <ReportCycle>INTERIM</ReportCycle>
+        <AsOfDate>2021-02-28</AsOfDate>
+        <DueDate>2021-04-30</DueDate>
+      </Submission>
+      <Submission>
+        <ID>738ee03d</ID>
+        <SubmissionNumber>6</SubmissionNumber>
+        <EventName>Complete LRIP Deliveries</EventName>
+        <ReportCycle>INTERIM</ReportCycle>
+        <AsOfDate>2021-02-28</AsOfDate>
+        <DueDate>2021-04-30</DueDate>
+      </Submission>
+      <Submission>
+        <ID>4243ace1</ID>
+        <SubmissionNumber>7</SubmissionNumber>
+        <EventName>Deliveries/Contract Complete</EventName>
+        <ReportCycle>FINAL</ReportCycle>
+        <AsOfDate>2022-01-31</AsOfDate>
+        <DueDate>2022-04-02</DueDate>
+      </Submission>
+      <Submission>
+        <ID>4049cc4b</ID>
+        <SubmissionNumber>8</SubmissionNumber>
+        <EventName>Deliveries/Contract Complete</EventName>
+        <ReportCycle>FINAL</ReportCycle>
+        <AsOfDate>2020-01-31</AsOfDate>
+        <DueDate>2020-04-01</DueDate>
+      </Submission>
+    </Submissions>
+  </SubmissionTable>
+  <SubmissionRequirementsTable>
+    <SubmissionRequirements>
+      <DataItem>
+        <SubmissionID>3ab3b6fc</SubmissionID>
+        <SubmissionItems>
+          <SubmissionItem>COST HOUR REPORT</SubmissionItem>
+          <SubmissionItem>QUANTITY REPORT</SubmissionItem>
+        </SubmissionItems>
+      </DataItem>
+      <DataItem>
+        <SubmissionID>63d3b315</SubmissionID>
+        <SubmissionItems>
+          <SubmissionItem>TECHNICAL DATA REPORT</SubmissionItem>
+        </SubmissionItems>
+      </DataItem>
+      <DataItem>
+        <SubmissionID>7ff99ffb</SubmissionID>
+        <SubmissionItems>
+          <SubmissionItem>COST HOUR REPORT</SubmissionItem>
+          <SubmissionItem>QUANTITY REPORT</SubmissionItem>
+        </SubmissionItems>
+      </DataItem>
+      <DataItem>
+        <SubmissionID>479f4fb7</SubmissionID>
+        <SubmissionItems>
+          <SubmissionItem>TECHNICAL DATA REPORT</SubmissionItem>
+        </SubmissionItems>
+      </DataItem>
+      <DataItem>
+        <SubmissionID>47bf4bde</SubmissionID>
+        <SubmissionItems>
+          <SubmissionItem>COST HOUR REPORT</SubmissionItem>
+          <SubmissionItem>QUANTITY REPORT</SubmissionItem>
+        </SubmissionItems>
+      </DataItem>
+      <DataItem>
+        <SubmissionID>738ee03d</SubmissionID>
+        <SubmissionItems>
+          <SubmissionItem>TECHNICAL DATA REPORT</SubmissionItem>
+        </SubmissionItems>
+      </DataItem>
+      <DataItem>
+        <SubmissionID>4243ace1</SubmissionID>
+        <SubmissionItems>
+          <SubmissionItem>COST HOUR REPORT</SubmissionItem>
+          <SubmissionItem>QUANTITY REPORT</SubmissionItem>
+        </SubmissionItems>
+      </DataItem>
+      <DataItem>
+        <SubmissionID>4049cc4b</SubmissionID>
+        <SubmissionItems>
+          <SubmissionItem>TECHNICAL DATA REPORT</SubmissionItem>
+        </SubmissionItems>
+      </DataItem>
+    </SubmissionRequirements>
+  </SubmissionRequirementsTable>
+  <Remarks>
+    <Text xsi:nil="true" />
+    <x1:HierarchicalRemarksStructure>
+      <x1:Nodes>
+        <x1:Node>
+          <x1:Text>a. CSDR Planning Approach &amp; Preparation Instructions</x1:Text>
+          <x1:ChildNodes>
+            <x1:Node>
+              <x1:Text xsi:nil="true" />
+              <x1:ChildNodes>
+                <x1:Node>
+                  <x1:Text>i. In addition to the direction provided in the associated CSDR Data Item Descriptions (DIDs) and the CSDR Manual, the following instructions, requirements, and considerations found on this page/worksheet shall be utilized when collecting data and preparing CSDR submissions.</x1:Text>
+                </x1:Node>
+                <x1:Node>
+                  <x1:Text>ii. This CSDR Contract plan is intended to capture costs associated the contract number(s) listed in block 9.b. The contractor shall capture and report any and all costs incurred in order to perform the scopes of work on the Contract irrespective of contract type (e.g., firm-fixed price, cost-plus fixed fee) or funding source (i.e., via contract, via contractor internal research &amp; development funds).</x1:Text>
+                </x1:Node>
+                <x1:Node>
+                  <x1:Text>iii. Costs reported against this CSDR Plan shall be cumulative in nature (i.e., each submission shall report any and all costs incurred on and prior to the submission’s “AS OF DATE” (block 14.e)).</x1:Text>
+                </x1:Node>
+                <x1:Node>
+                  <x1:Text>iv. Submission events associated with this CSDR Plan are classified as either "Initial", "Interim", or "Final" submissions as identified in block 14.d of this CSDR Plan.</x1:Text>
+                  <x1:ChildNodes>
+                    <x1:Node>
+                      <x1:Text>1. Submission events marked "Initial" shall report the Contractor's total anticipated contract cost and resulting price using the maximum allowable contractor quantities, hours, or options (as applicable). For sealed big contracts (i.e., contracts awarded under FAR Part 14) the reported FAC/EAC shall equal the value of the Contractor's sealed bid (using the maximum allowable contractor quantities, hours, or options (as applicable)). For negotiated contracts (i.e., contracts award under FAR Part 15) the reported FAC/EAC shall be equal in overall value to the Contractor's best and final offer (and consistent in distribution with any supporting cost and pricing data (e.g., basis of estimates, engineering build-ups) (using the maximum allowable contractor quantities, hours, or options (as applicable)). For all other contracts, the reported FAC/EAC shall be equal in overall value to the Contractor's final proposal and consistent in distribution with any supporting data provided to substantiate the contract's value, reasonableness, and/or realism (e.g., basis of estimates, engineering build-ups) (using the maximum allowable contractor quantities, hours, or options (as applicable)). No ATD costs are anticipated to reported on an "Initial" submission except for any certified precontract costs incurred prior to or on the date of contract award.</x1:Text>
+                    </x1:Node>
+                    <x1:Node>
+                      <x1:Text>2. "Interim" report submissions are any report that is not either an "Initial" or "Final" report. Reported ATD, EAC/FAC, and quantities on "Interim" submissions shall be prepared reflecting only the value of work, quantities, hours, or options (as applicable) awarded on the report's "As Of Date" (do not include costs for anticipated but not awarded scopes of work, quantities, hours, or options).</x1:Text>
+                    </x1:Node>
+                    <x1:Node>
+                      <x1:Text>3. Reported ATD, EAC/FAC, and quantities on "Final" submissions shall be prepared reflecting the value of work, quantities, hours, and options (as applicable) anticipated to be award on a contract and meet the following conditions for all reported Orders/Lots included in the CSDR submission:
+    a. Condition 1: The final end items anticipated to be procured have been delivered and accepted by the government (e.g., as evidenced by a completed DD Form 250) or higher tier contractor in the case of a subcontractor.
+    b. Condition 2: 95% or more of all ATD total costs have been incurred relative to all costs the reporting entity expects to incur for each and every Order/Lot (defined in Data Group B, Item 4 of the approved FlexFile DID).</x1:Text>
+                    </x1:Node>
+                  </x1:ChildNodes>
+                </x1:Node>
+                <x1:Node>
+                  <x1:Text>v. Regarding WBS Element Names (see block 11.c) that include the text “(1…n)”: WBS marked with this value are expected to have sibling or children elements but the exact nomenclature and/or number of those children or siblings is not known at the time this CSDR Plan was developed. The expectation is that children or sibling elements will be added, 1) based on information exchanged at the CSDR Post Award conference, or 2) as scopes of work, hours, options (as applicable) are executed over the course of the contract. Contractors shall develop their CSDR data collection and reporting strategy expecting that additional WBS will be added over the course of the contract when the new elements are a logical extension of the WBS marked “(1…n)”. Note that when sibling or children element is added, this CSDR Plan attachment will be revised via a no cost contractual modification. If the addition of WBS elements requires a change in the contract's price, all price changes shall be included in the contract modification that awarded scopes of work, hours, or options (as applicable) which caused additional WBS elements to be needed and not by the contract modification that revised the CSDR Plan attachment.</x1:Text>
+                </x1:Node>
+              </x1:ChildNodes>
+            </x1:Node>
+          </x1:ChildNodes>
+        </x1:Node>
+        <x1:Node>
+          <x1:Text>b. Submission Dates</x1:Text>
+          <x1:ChildNodes>
+            <x1:Node>
+              <x1:Text xsi:nil="true" />
+              <x1:ChildNodes>
+                <x1:Node>
+                  <x1:Text>i. All CSDR deliverable “AS OF DATE[S]” and “DUE DATE[S]” listed in blocks 14.e and 14.f are identified for planning purposes only. Submission dates are subject to change and are determined in accordance with the event drivers as identified below:</x1:Text>
+                  <x1:ChildNodes>
+                    <x1:Node>
+                      <x1:Text>1. All “DUE DATE” requirements are equal to the “AS OF DATE” plus 60 calendar days. If the calculated “Due Date” does not fall on a regular business day, the “Due Date” will be the next regular business day on the contractor’s accounting calendar.</x1:Text>
+                    </x1:Node>
+                    <x1:Node>
+                      <x1:Text>2. Initial Submission: Submission events marked as an "Initial" submission in block 14.d. shall have an “AS OF DATE” as of the date of contract award.</x1:Text>
+                    </x1:Node>
+                    <x1:Node>
+                      <x1:Text>3. Interim Submission(s): Submission events marked as an "Interim" submission in block 14.d shall have an "AS OF DATE" based on the submission event name in block 14.c. For example, if the submission event name was "Contract Award Plus 24 Months" then the submission's "AS OF DATE" is the contract award date plus 24 calendar months.  If the submission event name was "Complete Delivery of First Article Test Assets" then the submission's "AS OF DATE" would be the date the final First Artical Test Asset was delivered.</x1:Text>
+                    </x1:Node>
+                  </x1:ChildNodes>
+                </x1:Node>
+              </x1:ChildNodes>
+            </x1:Node>
+          </x1:ChildNodes>
+        </x1:Node>
+        <x1:Node>
+          <x1:Text>c. Cost and Hour Report (FlexFile)</x1:Text>
+          <x1:ChildNodes>
+            <x1:Node>
+              <x1:Text xsi:nil="true" />
+              <x1:ChildNodes>
+                <x1:Node>
+                  <x1:Text>i. The contractor shall utilize the following mappings from its accounting system when preparing and submitting FlexFile Actual Cost-Hour Data:</x1:Text>
+                  <x1:ChildNodes>
+                    <x1:Node>
+                      <x1:Text>1. {To be determined during the Post-Award CSDR Conference based on contractor's accounting system}</x1:Text>
+                    </x1:Node>
+                    <x1:Node>
+                      <x1:Text>2. {To be determined during the Post-Award CSDR Conference based on contractor's accounting system}</x1:Text>
+                    </x1:Node>
+                    <x1:Node>
+                      <x1:Text>3. {To be determined during the Post-Award CSDR Conference based on contractor's accounting system}</x1:Text>
+                    </x1:Node>
+                    <x1:Node>
+                      <x1:Text>...</x1:Text>
+                    </x1:Node>
+                    <x1:Node>
+                      <x1:Text>n. {To be determined during the Post-Award CSDR Conference based on contractor's accounting system}</x1:Text>
+                    </x1:Node>
+                  </x1:ChildNodes>
+                </x1:Node>
+                <x1:Node>
+                  <x1:Text>ii. The contractor shall utilize and include the following mappings from its accounting system to the Actual Cost-Hour Data tags:</x1:Text>
+                  <x1:ChildNodes>
+                    <x1:Node>
+                      <x1:Text>1. {To be determined during the Post-Award CSDR Conference based on contractor's accounting system} = Tag1</x1:Text>
+                    </x1:Node>
+                    <x1:Node>
+                      <x1:Text>2. {To be determined during the Post-Award CSDR Conference based on contractor's accounting system} = Tag2</x1:Text>
+                    </x1:Node>
+                    <x1:Node>
+                      <x1:Text>3. {To be determined during the Post-Award CSDR Conference based on contractor's accounting system} = Tag3</x1:Text>
+                    </x1:Node>
+                    <x1:Node>
+                      <x1:Text>...</x1:Text>
+                    </x1:Node>
+                    <x1:Node>
+                      <x1:Text>25. {To be determined during the Post-Award CSDR Conference based on contractor's accounting system} = Tag25</x1:Text>
+                    </x1:Node>
+                  </x1:ChildNodes>
+                </x1:Node>
+                <x1:Node>
+                  <x1:Text>iii. Order Lot Scope:  Block 16 of this CSDR Plan is meant to capture the discrete Delivery Orders/Task Orders (as applicable) exercised on the contract. If a Delivery Order/Task Order (as applicable) is exercised on the contract but is not listed in block 16, the contractor shall submit the dollars and hours in the Cost and Hour Report (FlexFile) and the quantity information in the Quantity Report tagged using the name of the Delivery Order/Task Order (as applicable) utilized on the contract. The CSDR Plan will be updated to include the appropriate Delivery Order/Task Order (as applicable) name in block 16, after report submission, if required.</x1:Text>
+                </x1:Node>
+                <x1:Node>
+                  <x1:Text>iv. End Item Scope:  Block 17 of this CSDR Plan is meant to capture the discrete hardware end items that are DD-250'ed, ordered, procured, or exercised (as applicable) on the contract. If an End Item is DD-250'ed, ordered, procured, or exercised (as applicable) on the contract but is not listed in block 17, the contractor shall submit the dollars and hours in the Cost and Hour Report (FlexFile) and the quantity information in the Quantity Report tagged using the name of the End Item utilized on the contract. The CSDR Plan will be updated to include the appropriate End Item name in block 17, after reprot submission, if required.</x1:Text>
+                </x1:Node>
+                <x1:Node>
+                  <x1:Text>v. The contractor shall provide unit reporting for any given Order/Lot and End Item name as outlined in Block 18 of this CSDR Plan. If Unit Reporting is selected in item 18c (Unit Reporting), it is expected that all touch labor costs and hours that are associated with the discrete units or sublots be tagged as Touch Manufacturing or Touch Maintenance as defined in DI-FNCL-82162, Data Group E, Item 7.</x1:Text>
+                </x1:Node>
+              </x1:ChildNodes>
+            </x1:Node>
+          </x1:ChildNodes>
+        </x1:Node>
+        <x1:Node>
+          <x1:Text>d. Period Of Performance &amp; Additional Scope Of Work</x1:Text>
+          <x1:ChildNodes>
+            <x1:Node>
+              <x1:Text xsi:nil="true" />
+              <x1:ChildNodes>
+                <x1:Node>
+                  <x1:Text>i. If the Contract period of performance is extended by more than six months, or if the scope of work is modified to include work not otherwise covered by the CSDR Plan, the government may modify the CSDR Plan to require additional submission events and add additional WBS elements in order to ensure the accurate and complete collection of cost data associated with the modified contract. Depending on the scope and complexity of the contract modification, the contractor may be required to host or attend an additional Post-Award Cost and Software Data Reporting Conference to review the CSDR Plan changes and the contractor’s plan to collect and report costs associated with the additional scope of work.</x1:Text>
+                </x1:Node>
+              </x1:ChildNodes>
+            </x1:Node>
+          </x1:ChildNodes>
+        </x1:Node>
+        <x1:Node>
+          <x1:Text>e. Cost Accounting Standards (CAS) Disclosure Statement Differences</x1:Text>
+          <x1:ChildNodes>
+            <x1:Node>
+              <x1:Text xsi:nil="true" />
+              <x1:ChildNodes>
+                <x1:Node>
+                  <x1:Text>i. The contractor shall follow the accounting procedures specified in its latest approved CAS Disclosure Statement and with any clauses or requirements included in the contract. As part of the Post-Award Cost and Software Data Reporting Conference, the contractor shall identify any aspect(s) of its latest approved CAS Disclosure Statement which preclude or lesser compliance with this CSDR Plan and DoD 5000.04-M-1 (CSDR Manual). The contractor shall identify any deviations from its CAS disclosure statement it intends to utilize to prepare CSDR submissions.</x1:Text>
+                </x1:Node>
+              </x1:ChildNodes>
+            </x1:Node>
+          </x1:ChildNodes>
+        </x1:Node>
+        <x1:Node>
+          <x1:Text>f. Non-Recurring/Recurring Segregation</x1:Text>
+          <x1:ChildNodes>
+            <x1:Node>
+              <x1:Text xsi:nil="true" />
+              <x1:ChildNodes>
+                <x1:Node>
+                  <x1:Text>i. The contractor shall utilize the specific definitions and requirements in the CSDR Manual (DoD 5000.04) and the definitions in the DID for the Cost and Hour Report (FlexFile) report (DI-FNCL-82162) to segregate Recurring and Nonrecurring costs discretely and not as an aggregate.</x1:Text>
+                </x1:Node>
+              </x1:ChildNodes>
+            </x1:Node>
+          </x1:ChildNodes>
+        </x1:Node>
+      </x1:Nodes>
+    </x1:HierarchicalRemarksStructure>
+  </Remarks>
+  <ScopeDefinitionSupplement>
+    <OrderOrLotTable>
+      <OrdersOrLots>
+        <OrderOrLot>
+          <ID>1_BA</ID>
+          <Name>Base Award</Name>
+          <PhaseOrMilestone>C-LRIP</PhaseOrMilestone>
+        </OrderOrLot>
+        <OrderOrLot>
+          <ID>2_L1</ID>
+          <Name>LRIP Order 1</Name>
+          <PhaseOrMilestone>C-LRIP</PhaseOrMilestone>
+        </OrderOrLot>
+        <OrderOrLot>
+          <ID>3_L2</ID>
+          <Name>LRIP Order 2</Name>
+          <PhaseOrMilestone>C-LRIP</PhaseOrMilestone>
+        </OrderOrLot>
+        <OrderOrLot>
+          <ID>4_F1</ID>
+          <Name>FRP Order 1</Name>
+          <PhaseOrMilestone>C-FRP</PhaseOrMilestone>
+        </OrderOrLot>
+        <OrderOrLot>
+          <ID>5_F2</ID>
+          <Name>FRP Order 2</Name>
+          <PhaseOrMilestone>C-FRP</PhaseOrMilestone>
+        </OrderOrLot>
+      </OrdersOrLots>
+    </OrderOrLotTable>
+    <EndItemTable>
+      <EndItems>
+        <EndItem>
+          <ID>1_common</ID>
+          <Name>Common</Name>
+        </EndItem>
+        <EndItem>
+          <ID>2_GP</ID>
+          <Name>General Purpose Variant</Name>
+        </EndItem>
+        <EndItem>
+          <ID>3_C2</ID>
+          <Name>Command &amp; Control Variant</Name>
+        </EndItem>
+        <EndItem>
+          <ID>4_HW</ID>
+          <Name>Heavy Weapons Variant</Name>
+        </EndItem>
+        <EndItem>
+          <ID>5_cbk</ID>
+          <Name>Combat Bumper Kit</Name>
+        </EndItem>
+        <EndItem>
+          <ID>6_fk</ID>
+          <Name>Fording Kit</Name>
+        </EndItem>
+        <EndItem>
+          <ID>7_wk</ID>
+          <Name>Winch Kit</Name>
+        </EndItem>
+      </EndItems>
+    </EndItemTable>
+    <RequirementsTable>
+      <DataItems>
+        <DataItem>
+          <OrderOrLotID>1_BA</OrderOrLotID>
+          <EndItemID>2_GP</EndItemID>
+          <UnitReporting>true</UnitReporting>
+          <UnitSequencing>true</UnitSequencing>
+        </DataItem>
+        <DataItem>
+          <OrderOrLotID>1_BA</OrderOrLotID>
+          <EndItemID>3_C2</EndItemID>
+          <UnitReporting>true</UnitReporting>
+          <UnitSequencing>true</UnitSequencing>
+        </DataItem>
+        <DataItem>
+          <OrderOrLotID>1_BA</OrderOrLotID>
+          <EndItemID>4_HW</EndItemID>
+          <UnitReporting>true</UnitReporting>
+          <UnitSequencing>true</UnitSequencing>
+        </DataItem>
+        <DataItem>
+          <OrderOrLotID>2_L1</OrderOrLotID>
+          <EndItemID>2_GP</EndItemID>
+          <UnitReporting>true</UnitReporting>
+          <UnitSequencing>true</UnitSequencing>
+        </DataItem>
+        <DataItem>
+          <OrderOrLotID>2_L1</OrderOrLotID>
+          <EndItemID>3_C2</EndItemID>
+          <UnitReporting>true</UnitReporting>
+          <UnitSequencing>true</UnitSequencing>
+        </DataItem>
+        <DataItem>
+          <OrderOrLotID>2_L1</OrderOrLotID>
+          <EndItemID>4_HW</EndItemID>
+          <UnitReporting>true</UnitReporting>
+          <UnitSequencing>true</UnitSequencing>
+        </DataItem>
+        <DataItem>
+          <OrderOrLotID>3_L2</OrderOrLotID>
+          <EndItemID>2_GP</EndItemID>
+          <UnitReporting>true</UnitReporting>
+          <UnitSequencing>true</UnitSequencing>
+        </DataItem>
+        <DataItem>
+          <OrderOrLotID>3_L2</OrderOrLotID>
+          <EndItemID>3_C2</EndItemID>
+          <UnitReporting>true</UnitReporting>
+          <UnitSequencing>true</UnitSequencing>
+        </DataItem>
+        <DataItem>
+          <OrderOrLotID>3_L2</OrderOrLotID>
+          <EndItemID>4_HW</EndItemID>
+          <UnitReporting>true</UnitReporting>
+          <UnitSequencing>true</UnitSequencing>
+        </DataItem>
+        <DataItem>
+          <OrderOrLotID>4_F1</OrderOrLotID>
+          <EndItemID>2_GP</EndItemID>
+          <UnitReporting>true</UnitReporting>
+          <UnitSequencing>true</UnitSequencing>
+        </DataItem>
+        <DataItem>
+          <OrderOrLotID>4_F1</OrderOrLotID>
+          <EndItemID>3_C2</EndItemID>
+          <UnitReporting>true</UnitReporting>
+          <UnitSequencing>true</UnitSequencing>
+        </DataItem>
+        <DataItem>
+          <OrderOrLotID>4_F1</OrderOrLotID>
+          <EndItemID>4_HW</EndItemID>
+          <UnitReporting>true</UnitReporting>
+          <UnitSequencing>true</UnitSequencing>
+        </DataItem>
+        <DataItem>
+          <OrderOrLotID>5_F2</OrderOrLotID>
+          <EndItemID>2_GP</EndItemID>
+          <UnitReporting>true</UnitReporting>
+          <UnitSequencing>true</UnitSequencing>
+        </DataItem>
+        <DataItem>
+          <OrderOrLotID>5_F2</OrderOrLotID>
+          <EndItemID>3_C2</EndItemID>
+          <UnitReporting>true</UnitReporting>
+          <UnitSequencing>true</UnitSequencing>
+        </DataItem>
+        <DataItem>
+          <OrderOrLotID>5_F2</OrderOrLotID>
+          <EndItemID>4_HW</EndItemID>
+          <UnitReporting>true</UnitReporting>
+          <UnitSequencing>true</UnitSequencing>
+        </DataItem>
+      </DataItems>
+    </RequirementsTable>
+  </ScopeDefinitionSupplement>
+  <ResourceDistributionTable>
+    <ContractorAndOrganizationTable>
+      <ContractorsAndOrganizations>
+        <ContractorOrOrganization>
+          <ID>6e5eb40b</ID>
+          <Name>Con-Tractor, LLC</Name>
+          <Location>New New York, NY</Location>
+          <cpet1:ContractorInfo>
+            <cpet1:ContractorID xsi:nil="true" />
+            <cpet1:ContractorAlias>Con-Tractor, LLC</cpet1:ContractorAlias>
+            <cpet1:DivisionName xsi:nil="true" />
+            <cpet1:Location>New New York, NY</cpet1:Location>
+            <cpet1:ShortName xsi:nil="true" />
+            <cpet1:DunsCode xsi:nil="true" />
+            <cpet1:IsAnonymous>false</cpet1:IsAnonymous>
+          </cpet1:ContractorInfo>
+        </ContractorOrOrganization>
+      </ContractorsAndOrganizations>
+    </ContractorAndOrganizationTable>
+    <ContractAndEffortStructure>
+      <Contracts>
+        <Contract>
+          <ID>313d8937</ID>
+          <ContractorOrOrganizationID>6e5eb40b</ContractorOrOrganizationID>
+          <Description xsi:nil="true" />
+          <ContractNumber>W123D4-56-P-7890</ContractNumber>
+          <TotalContractOrEffortValue xsi:nil="true" />
+          <SubtotalSoftwareContractValue xsi:nil="true" />
+          <GovernmentOrganizationOrPARM xsi:nil="true" />
+          <CSDRDirectReportingPerCWIPT xsi:nil="true" />
+          <SRDRDirectReportingPerCWIPT xsi:nil="true" />
+        </Contract>
+      </Contracts>
+    </ContractAndEffortStructure>
+    <ReportingElementAssignmentTable xsi:nil="true" />
+  </ResourceDistributionTable>
+</csdr:Document>
