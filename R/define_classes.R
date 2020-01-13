@@ -83,7 +83,7 @@ flexfile <- structure(
             DatePrepared = lubridate::ymd(),
             ReportingPeriodID = integer()
         ),
-        OrdersOrLots = list(
+        OrdersOrLots = dplyr::tibble(
             ID = character(),
             Name = character(),
             PhaseOrMilestoneID = character(),
@@ -98,47 +98,47 @@ flexfile <- structure(
                     "RDTE",
                     "PROCUREMENT",
                     "O_AND_M"
-                    )),
-        CLINs = list(
+                    ))),
+        CLINs = dplyr::tibble(
             ID = character(),
             Name = character(),
             ContractTypeID = character()
         ),
-        EndItems = list(
+        EndItems = dplyr::tibble(
             ID = character(),
             Name = character()
         ),
-        WBS = list(
+        WBS = dplyr::tibble(
             Level = integer(),
             ID = character(),
             Name = character(),
             ParentID = character()
         ),
-        Accounts = list(
+        Accounts = dplyr::tibble(
             ID = character(),
             Name = character()
         ),
-        FunctionalCategories = list(
+        FunctionalCategories = dplyr::tibble(
             ID = character(),
             Name = character()
         ),
-        FunctionalOverheadCategories = list(
+        FunctionalOverheadCategories = dplyr::tibble(
             ID = character(),
             Name = character()
         ),
-        UnitsOrSublots = list(
+        UnitsOrSublots = dplyr::tibble(
             ID = character(),
             EndItemID = character(),
             FirstUnitNumber = integer(),
             LastUnitNumber = integer(),
             OrderOrLotID = character()
         ),
-        ReportingCalendar = list(
+        ReportingCalendar = dplyr::tibble(
             ID = integer(),
             StartDate = lubridate::ymd(),
             EndDate = lubridate::ymd()
         ),
-        SummaryCostData = list(
+        SummaryCostData = dplyr::tibble(
             OrderOrLotID = character(),
             Subtotal_TD = numeric(),
             Subtotal_AC = numeric(),
@@ -153,7 +153,7 @@ flexfile <- structure(
             Price_TD = numeric(),
             Price_AC = numeric()
         ),
-        ActualCostHourData = list(
+        ActualCostHourData = dplyr::tibble(
             OrderOrLotID = character(),
             CLIN_ID = character(),
             EndItemID = character(),
@@ -244,7 +244,7 @@ flexfile <- structure(
             Value_Dollars = numeric(),
             Value_Hours = numeric()
         ),
-        ForecastAtCompletionCostHourData = list(
+        ForecastAtCompletionCostHourData = dplyr::tibble(
             OrderOrLotID = character(),
             WBSElementID = character(),
             NonrecurringOrRecurringID = character(),
@@ -253,7 +253,7 @@ flexfile <- structure(
             Value_Dollars = numeric(),
             Value_Hours = numeric()
         ),
-        AllocationMethods = list(
+        AllocationMethods = dplyr::tibble(
             ID = character(),
             AllocationMethodTypeID = factor(
                 levels = c(
@@ -263,7 +263,7 @@ flexfile <- structure(
             IsUnitOrSublotAllocationMethod = logical(),
             Name = character()
         ),
-        AllocationComponents = list(
+        AllocationComponents = dplyr::tibble(
             AllocationMethodID = character(),
             OrderOrLotID = character(),
             EndItemID = character(),
@@ -271,20 +271,20 @@ flexfile <- structure(
             UnitOrSublotID = character(),
             PercentValue = numeric()
         ),
-        SummaryRemarks = list(
+        SummaryRemarks = dplyr::tibble(
             OrderOrLotID = character(),
             Text = character()
         ),
-        WBSElementRemarks = list(
+        WBSElementRemarks = dplyr::tibble(
             OrderOrLotID = character(),
             WBSElementID = character(),
             Text = character()
         ),
-        WBSDictionaryDefinitions = list(
+        WBSDictionaryDefinitions = dplyr::tibble(
             WBSElementID = character(),
             Text = character()
         ),
-        CostHourTagDefinitions = list(
+        CostHourTagDefinitions = dplyr::tibble(
             CostHourTagID = factor(
                 levels = c(
                     "TAG1",
@@ -318,7 +318,15 @@ flexfile <- structure(
         )
     ),
     class = "flexfile"
-))
+)
+
+new_flexfile <- function(...) {
+    structure(flexfile, class = "flexfile")
+}
+
+test <- new_flexfile()
+
+# Quantity Report -------------------------------------------------------------
 
 qty_rpt <- structure(
     list(
@@ -395,7 +403,7 @@ qty_rpt <- structure(
             PointOfContact_EmailAddress = character(),
             DatePrepared = lubridate::ymd()
         ),
-        OrdersOrLots = list(
+        OrdersOrLots = dplyr::tibble(
             ID = character(),
             Name = character(),
             PhaseOrMilestoneID = character(),
@@ -411,17 +419,17 @@ qty_rpt <- structure(
                     "PROCUREMENT",
                     "O_AND_M"
                 ))),
-        EndItems = list(
+        EndItems = dplyr::tibble(
             ID = character(),
             Name = character()
         ),
-        WBS = list(
+        WBS = dplyr::tibble(
             Level = integer(),
             ID = character(),
             Name = character(),
             ParentID = character()
         ),
-        QuantitiesAtCompletion = list(
+        QuantitiesAtCompletion = dplyr::tibble(
             OrderOrLotID = character(),
             EndItemID = character(),
             WBSElementID = character(),
@@ -430,24 +438,24 @@ qty_rpt <- structure(
             CoproductionOrConcurrentQuantityAtCompletion = numeric(),
             GFEQuantityAtCompletion = numeric()
         ),
-        QuantitiesToDate = list(
+        QuantitiesToDate = dplyr::tibble(
             OrderOrLotID = character(),
             WBSElementID = character(),
             CompletedQuantityToDate = numeric(),
             InProcessQuantity = numeric()
         ),
-        ProductionSequence = list(
+        ProductionSequence = dplyr::tibble(
             EndItemID = character(),
             FirstUnitNumber = integer(),
             LastUnitNumber = integer(),
             OrderOrLotID = character(),
             IsInternal = logical()
         ),
-        SummaryRemarks = list(
+        SummaryRemarks = dplyr::tibble(
             OrderOrLotID = character(),
             Text = character()
         ),
-        WBSElementRemarks = list(
+        WBSElementRemarks = dplyr::tibble(
             OrderOrLotID = character(),
             WBSElementID = character(),
             Text = character()
@@ -482,4 +490,3 @@ new_PhaseOrMilestoneID <- function(PhaseOrMilestoneID = factor()) {
               class = "PhaseOrMilestoneID")
     }
 
-foo <- new_PhaseOrMilestoneID("PRE_A")
