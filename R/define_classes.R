@@ -368,8 +368,6 @@ new_flexfile <- function(...) {
     structure(flexfile, class = "flexfile")
 }
 
-test <- new_flexfile()
-
 # Quantity Report -------------------------------------------------------------
 
 qty_rpt <- structure(
