@@ -147,4 +147,3 @@ units_or_sublots <- units_or_sublots %>%
            FirstUnitNumber,
            LastUnitNumber,
            OrderOrLotID)
-
