@@ -17,8 +17,6 @@ ff_comments <- extract_comment(ff_part1) %>%
     bind_rows(., extract_comment(ff_part2)) %>%
     bind_rows(., extract_comment(ff_part3))
 
-ff_comments %>% View()
-
 standard_category_id <- filter(ff_comments) %>%
     filter(catigory == "Standard Category ID") %>%
     select(value = comment) %>%
