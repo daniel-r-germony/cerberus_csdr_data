@@ -1,4 +1,8 @@
 
+library(magrittr)
+library(dplyr)
+library(tibble)
+
 order_or_lots_table <- tribble(
     ~ID,	~Name,          ~PhaseOrMilestoneID, ~CustomerName,
     "1_BA", "Base Award",   "C_LRIP",            NA_character_,

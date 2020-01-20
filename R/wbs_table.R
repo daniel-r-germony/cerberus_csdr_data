@@ -1,4 +1,6 @@
 
+library(tibble)
+
 wbs_table <- tribble(~Level, ~ID,             ~Name,                                                    ~ParentID,
                      1L,	 "1.0",	          "Cerberus Autonomous Vehicles",	                        NA_character_,
                      2L,	 "1.1",	          "Family of Cerberus Autonomous Vehicle",	                "1.0",

@@ -1,4 +1,9 @@
 
+library(magrittr)
+library(dplyr)
+library(tibble)
+library(stringr)
+
 clin_table <- tibble(
     ID = factor(c("0001", "0002", "0003", "0004", "0005", "0006",
                   "1001", "1002", "1003", "1004", "1005", "1006",

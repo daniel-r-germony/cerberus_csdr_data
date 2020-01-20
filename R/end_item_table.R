@@ -1,4 +1,6 @@
 
+library(tibble)
+
 end_item_table <- tribble(~ID,          ~Name,
                           "1_Common",	"Common",
                           "2_CTV_GP",	"Cerberus Tactical Vehicle - General Purpose Variant",

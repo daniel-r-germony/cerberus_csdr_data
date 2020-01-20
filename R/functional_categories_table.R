@@ -1,4 +1,7 @@
 
+library(magrittr)
+library(dplyr)
+
 functional_categories_table <- oes_data %>%
     filter(occ_group == "minor") %>%
     select(ID = occ_code,
@@ -107,4 +110,3 @@ TRUE ~ NA_character_
 detailed_standard_category_id %>%
     left_join({functional_categories_table %>% count(detailed_standard_category_id)},
               by = c("value" = "detailed_standard_category_id")) %>% print(n = Inf)
-
