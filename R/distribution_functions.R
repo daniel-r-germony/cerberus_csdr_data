@@ -7,10 +7,10 @@
 #' the data will be phased over along with normally distributed shape
 #' paramaters.
 #'
-#' @param FunctionalCategories Required. A dataframe of avaiable
-#'   FunctionalCategories.
 #' @param FunctionalCategoryID Required. A single character string to subset
 #'   from the FunctionalCategories table and generate random values against.
+#' @param FunctionalCategories Required. A dataframe of avaiable
+#'   FunctionalCategories.
 #' @param min The lower limit of the distribution. Must be finite.
 #' @param max The upper limit of the distribution. Must be finite.
 #' @param ReportingCalendar Required. The reporting calendar dataframe.
@@ -22,17 +22,17 @@
 #'
 #' @examples
 #'
-#' functional_categories_table %>%
-#'   mutate_normal_dist_hours("11-1000",
+#' "11-1000" %>%
+#'   mutate_normal_dist_hours(functional_categories_table,
 #'     ReportingCalendar = reporting_calendar_table)
 #'
-#' functional_categories_table %>%
-#'   mutate_normal_dist_hours("11-1000",
+#' "11-1000" %>%
+#'   mutate_normal_dist_hours(functional_categories_table,
 #'     ReportingCalendar = reporting_calendar_table,
 #'     min = 100, max = 999)
 #' @export
-mutate_normal_dist_hours <- function(FunctionalCategories,
-                FunctionalCategoryID,
+mutate_normal_dist_hours <- function(FunctionalCategoryID,
+                FunctionalCategories,
                 min = 0,
                 max = 1,
                 ReportingCalendar,
@@ -61,10 +61,10 @@ mutate_normal_dist_hours <- function(FunctionalCategories,
 #' FunctionalCategoryID to create data for, and the ReportingCalendar the data
 #' will be phased over along with Beta distributing shape paramaters.
 #'
-#' @param FunctionalCategories Required. A dataframe of avaiable
-#'   FunctionalCategories.
 #' @param FunctionalCategoryID Required. A single character string to subset
 #'   from the FunctionalCategories table and generate random values against.
+#' @param FunctionalCategories Required. A dataframe of avaiable
+#'   FunctionalCategories.
 #' @param shape1 Alpha paramater for the Beta distribution. Must be
 #'   non-negative.
 #' @param shape2 Beta paramater for the Beta distribution. Must be non-negative.
@@ -77,17 +77,16 @@ mutate_normal_dist_hours <- function(FunctionalCategories,
 #'
 #' @examples
 #'
-#' functional_categories_table %>%
-#'   mutate_beta_dist_hours("11-1000",
+#' "11-1000" %>%
+#'   mutate_beta_dist_hours(functional_categories_table,
 #'     shape1 = 1, shape2 = 3,
 #'     ReportingCalendar = reporting_calendar_table)
 #'
-#' functional_categories_table %>%
-#'   mutate_beta_dist_hours("11-1000", 2, 5,
+#'   mutate_beta_dist_hours("11-1000", functional_categories_table, 2, 5,
 #'     ReportingCalendar = reporting_calendar_table)
 #' @export
-mutate_beta_dist_hours <- function(FunctionalCategories,
-                            FunctionalCategoryID,
+mutate_beta_dist_hours <- function(FunctionalCategoryID,
+                            FunctionalCategories,
                             shape1,
                             shape2,
                             ReportingCalendar,
