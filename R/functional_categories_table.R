@@ -100,7 +100,7 @@ ID == "53-2000" ~ NA_character_, # Air Transportation Workers
 ID == "53-3000" ~ "DIRECT_MAINTENANCE_SUPPORT_LABOR", # Motor Vehicle Operators
 ID == "53-4000" ~ NA_character_, # Rail Transportation Workers
 ID == "53-5000" ~ NA_character_, # Water Transportation Workers
-ID == "53-6000" ~ "DIRECT_MAINTENANCE_SUPPORT_LABOR", # Other Transportation Workers
+ID == "53-6000" ~ "MATERIAL_OVERHEAD", # Other Transportation Workers
 ID == "53-7000" ~ "MATERIAL_OVERHEAD", # Material Moving Workers
 TRUE ~ NA_character_
     ))
