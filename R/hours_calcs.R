@@ -550,4 +550,52 @@ hours_mat_movers_rec <- "53-7000" %>%
     ) %>% mutate(
         NonrecurringOrRecurringID = "RECURRING")
 
+# Bind RECURRING hours into one tibble -----
+
+recurring_hours <- bind_rows(
+    hours_executive_rec,
+    hours_sales_rec,
+    hours_ops_mgmr_rec,
+    hours_other_mgmt_rec,
+    hours_biz_ops_rec,
+    hours_finance_rec,
+    hours_eng_cs_rec,
+    hours_eng_math_rec,
+    hours_eng_rec,
+    hours_eng_tech_rec,
+    hours_design_rec,
+    hours_comm_rec,
+    hours_comm_equ_rec,
+    hours_ot_rec,
+    hours_other_heath_rec,
+    hours_sales_super_rec,
+    hours_sales_field_rec,
+    hours_sales_ws_rec,
+    hours_sales_other_rec,
+    hours_office_supers_rec,
+    hours_finance_clerks_rec,
+    hours_other_clerks_rec,
+    hours_records_rec,
+    hours_admin_assistant_rec,
+    hours_other_office_rec,
+    hours_const_supers_rec,
+    hours_const_trade_rec,
+    hours_const_support_rec,
+    hours_const_other_rec,
+    hours_mx_supers_rec,
+    hours_mx_elec_rec,
+    hours_mx_vehicle_rec,
+    hours_mx_other_rec,
+    hours_prod_supers_rec,
+    hours_prod_assembly_rec,
+    hours_prod_welding_rec,
+    hours_prod_paint_rec,
+    hours_prod_ops_rec,
+    hours_prod_other,
+    hours_mat_supers_rec,
+    hours_mx_operators_rec,
+    hours_mat_other_rec,
+    hours_mat_movers_rec
+)
+
 # NONRECURRING -------------------------------------------------------------------
