@@ -622,4 +622,5 @@ nonrecurring_hours <- bind_rows(
     hours_mx_operators_nr,
     hours_mat_other_nr,
     hours_mat_movers_nr
-)
+) %>% filter(Value_Hours > 0)
+
