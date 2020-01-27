@@ -553,4 +553,3 @@ new_PhaseOrMilestoneID <- function(PhaseOrMilestoneID = factor()) {
               levels = levels,
               class = "PhaseOrMilestoneID")
     }
-
