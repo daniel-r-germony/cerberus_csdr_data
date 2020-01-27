@@ -105,6 +105,9 @@ ID == "53-7000" ~ "MATERIAL_OVERHEAD", # Material Moving Workers
 TRUE ~ NA_character_
     ))
 
+functional_categories_table <- functional_categories_table %>%
+    filter(!is.na(detailed_standard_category_id))
+
 # Create a count of how many of the 'oes_data' catigories have been crosswalked
 # to the 'detailed_standard_category_id'
 detailed_standard_category_id %>%
