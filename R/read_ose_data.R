@@ -6,22 +6,36 @@
 # labor categories.
 
 library(tidyverse)
+library(unpivotr)
+library(tidyxl)
 
-url <- "https://www.bls.gov/oes/special.requests/oesm18nat.zip"
-temp <- tempfile()
-download.file(url, temp)
-unzip(temp)
-field_descriptions <- tidyxl::xlsx_cells("oesm18nat/field_descriptions.xlsx")
-national_M2018_dl <- tidyxl::xlsx_cells("oesm18nat/national_M2018_dl.xlsx")
+if (utils::menu(c("Use the local copy.", "Replace local copy with new download."),
+                title = "Do you want to use a local copy of the BLS data?") == 2) {
 
-# SAVE A COPY OF DATA ---------------------------------------------------------
+    url <- "https://www.bls.gov/oes/special.requests/oesm18nat.zip"
+    temp <- tempfile()
+    download.file(url, temp)
 
-curl::curl_download(url, here::here("data", paste0(Sys.Date(), "-oesm18nat.zip")))
+    # SAVE A COPY OF DATA -----------------------------------------------------
+    curl::curl_download(url, here::here("data", "oesm18nat.zip"))
+    unzip(here::here("data", "oesm18nat.zip"))
 
-# CLEAN UP --------------------------------------------------------------------
+    field_descriptions <- tidyxl::xlsx_cells("oesm18nat/field_descriptions.xlsx")
+    national_M2018_dl <- tidyxl::xlsx_cells("oesm18nat/national_M2018_dl.xlsx")
 
-unlink(here::here("oesm18nat"), recursive = TRUE)
-rm(temp, url)
+    # CLEAN UP ----------------------------------------------------------------
+
+    unlink(here::here("oesm18nat"), recursive = TRUE)
+    rm(temp, url)
+
+} else {
+
+    unzip(here::here("data", "oesm18nat.zip"))
+    field_descriptions <- tidyxl::xlsx_cells("oesm18nat/field_descriptions.xlsx")
+    national_M2018_dl <- tidyxl::xlsx_cells("oesm18nat/national_M2018_dl.xlsx")
+    unlink(here::here("oesm18nat"), recursive = TRUE)
+
+}
 
 # MUNGE -----------------------------------------------------------------------
 
@@ -29,7 +43,7 @@ rm(temp, url)
 
 oes_field_descriptions <- field_descriptions %>%
     dplyr::filter(row %in% 11:42) %>%
-    unpivotr::behead(direction = "W", name = "oes_field") %>%
+    unpivotr::behead("W", name = "oes_field") %>%
     dplyr::select(oes_field, "oes_field_description" = character)
 
 oes_sentinel_descriptions <- field_descriptions %>%

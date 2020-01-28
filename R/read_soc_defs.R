@@ -9,14 +9,20 @@ library(tidyverse)
 library(tidyxl)
 library(unpivotr)
 
-url <- "https://www.bls.gov/soc/2018/soc_2018_definitions.xlsx"
 destfile <- "soc_2018_definitions.xlsx"
-curl::curl_download(url, destfile)
-soc_2018_definitions <- tidyxl::xlsx_cells(destfile)
+url <- "https://www.bls.gov/soc/2018/soc_2018_definitions.xlsx"
 
-# SAVE A COPY OF DATA ---------------------------------------------------------
+if (utils::menu(c("Use the local copy.", "Replace local copy with new download."),
+                title = "Do you want to use a local copy of the BLS data?") == 2) {
 
-curl::curl_download(url, here::here("data", paste0(Sys.Date(), "-soc_2018_definitions.xlsx")))
+    curl::curl_download(url, destfile)
+
+    # SAVE A COPY OF DATA ---------------------------------------------------------
+    curl::curl_download(url, here::here("data","soc_2018_definitions.xlsx"))
+
+}
+
+soc_2018_definitions <- tidyxl::xlsx_cells(here::here("data",destfile))
 
 # CLEAN UP --------------------------------------------------------------------
 
