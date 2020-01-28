@@ -7,6 +7,14 @@ library(unpivotr)
 # Go to each URL in "urls", download the file found at the URL and give it the
 # name in "destfiles" and save it in the "FlexFile Three Part Template" folder.
 
+destfiles <- c("FlexFile Excel Template Part 1 - Metadata & Structures - Mar 2019.xlsx",
+               "FlexFile Excel Template Part 2 - Actual Cost-Hour Data - Mar 2019.xlsx",
+               "FlexFile Excel Template Part 3 - Supplemental Data - Mar 2019.xlsx",
+               "Quantity Excel Template - Mar 2019.xlsx")
+
+if (utils::menu(c("Use the local copy.", "Replace local copy with new download."),
+                title = "Do you want to use a local copy of the FlexFile templates?") == 2) {
+
 urls <- c(
     "https://cade.osd.mil/content/cade/files/csdr/dids/current/Flex%20File%20-%20Alt%20Sub%20Template%20-%20Part%201%20-%20Metadata%20and%20Structures_Mar2019.xlsx",
     "https://cade.osd.mil/content/cade/files/csdr/dids/current/Flex%20File%20-%20Alt%20Sub%20Template%20-%20Part%202%20-%20Actual%20Cost-Hour%20Data_March%202019.xlsx",
@@ -15,13 +23,9 @@ urls <- c(
 
 fs::dir_create(here::here("data","FlexFile Three Part Template"))
 
-destfiles <- c("FlexFile Excel Template Part 1 - Metadata & Structures - Mar 2019.xlsx",
-               "FlexFile Excel Template Part 2 - Actual Cost-Hour Data - Mar 2019.xlsx",
-               "FlexFile Excel Template Part 3 - Supplemental Data - Mar 2019.xlsx",
-               "Quantity Excel Template - Mar 2019.xlsx")
-
-
 walk2(urls, here::here("data","FlexFile Three Part Template", destfiles), download.file, mode = "wb")
+
+}
 
 ff_part1 <-
     tidyxl::xlsx_cells(
