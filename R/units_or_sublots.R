@@ -147,3 +147,11 @@ units_or_sublots <- units_or_sublots %>%
            FirstUnitNumber,
            LastUnitNumber,
            OrderOrLotID)
+
+# # Prints a table with end items as rows and order lots as columns with
+# # values of qty per end item/order lot.
+# units_or_sublots %>%
+#     group_by(OrderOrLotID, ID) %>%
+#     summarise(Qty = max(LastUnitNumber) - min(FirstUnitNumber) + 1) %>%
+#     pivot_wider(names_from = OrderOrLotID, values_from = Qty) %>%
+#     print(n = Inf)

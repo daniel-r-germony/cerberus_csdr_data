@@ -2,7 +2,9 @@
 library(magrittr)
 library(dplyr)
 
-#%>%  ggplot(aes(StartDate, Value_Hours)) + geom_col()
+# # Can stick this at the end of any of the below assignments to get a quick
+# # view of what cost looks like by month.
+# %>%  ggplot(aes(StartDate, Value_Hours)) + geom_col()
 
 # NONRECURRING -------------------------------------------------------------------
 # 11-1000 Top Executives -----
@@ -576,7 +578,7 @@ hours_mat_movers_nr <- "53-7000" %>%
     ) %>% mutate(
         NonrecurringOrRecurringID = "NONRECURRING")
 
-# Bind RECURRING hours into one tibble -----
+# Bind NONRECURRING hours into one tibble and remove 0 values -----
 
 nonrecurring_hours <- bind_rows(
     hours_executive_nr,

@@ -1,9 +1,7 @@
 
-units_or_sublots %>%
-    group_by(OrderOrLotID, ID) %>%
-    summarise(Qty = max(LastUnitNumber) - min(FirstUnitNumber) + 1) %>%
-    pivot_wider(names_from = OrderOrLotID, values_from = Qty) %>%
-    print(n = Inf)
+library(magrittr)
+library(dplyr)
+library(tidyr)
 
 material_cost <- units_or_sublots %>%
     group_by(EndItemID, OrderOrLotID) %>%
@@ -72,17 +70,16 @@ material_cost <- units_or_sublots %>%
            unit_cost = VALUE_DOLLARS / end_item_qty,
            fac_VALUE_DOLLARS = VALUE_DOLLARS * runif(length(VALUE_DOLLARS), 0.95, 1.30))
 
-wbs_table
+# # Creates a table to show the cost by month and detailed_standard_category_id
+# material_cost %>%
+#     ggplot(aes(FirstUnitNumber, VALUE_DOLLARS)) +
+#     geom_col(aes(fill = detailed_standard_category_id)) +
+#     facet_wrap(detailed_standard_category_id ~ EndItemID)
 
-material_cost %>%
-    ggplot(aes(FirstUnitNumber, VALUE_DOLLARS)) +
-    geom_col(aes(fill = detailed_standard_category_id)) +
-    facet_wrap(detailed_standard_category_id ~ EndItemID)
-
-units_or_sublots %>%
-    group_by(EndItemID, OrderOrLotID) %>%
-    mutate(percent_complete = FirstUnitNumber / max(LastUnitNumber)) %>%
-    mutate(test_col = case_when(
-               ID == "5" ~ 850 * length(percent_complete),
-               TRUE ~ NA_real_)) %>% filter(!is.na(test_col)) %>% print(n = Inf)
-
+# # No idea why I wrote this or what I was looking for.
+# units_or_sublots %>%
+#     group_by(EndItemID, OrderOrLotID) %>%
+#     mutate(percent_complete = FirstUnitNumber / max(LastUnitNumber)) %>%
+#     mutate(test_col = case_when(
+#                ID == "5" ~ 850 * length(percent_complete),
+#                TRUE ~ NA_real_)) %>% filter(!is.na(test_col)) %>% print(n = Inf)

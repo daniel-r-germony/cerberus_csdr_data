@@ -103,13 +103,12 @@ ID == "53-5000" ~ NA_character_, # Water Transportation Workers
 ID == "53-6000" ~ "MATERIAL_OVERHEAD", # Other Transportation Workers
 ID == "53-7000" ~ "MATERIAL_OVERHEAD", # Material Moving Workers
 TRUE ~ NA_character_
-    ))
-
-functional_categories_table <- functional_categories_table %>%
+    )) %>%
     filter(!is.na(detailed_standard_category_id))
 
-# Create a count of how many of the 'oes_data' catigories have been crosswalked
-# to the 'detailed_standard_category_id'
-detailed_standard_category_id %>%
-    left_join({functional_categories_table %>% count(detailed_standard_category_id)},
-              by = c("value" = "detailed_standard_category_id")) %>% print(n = Inf)
+## Uncomment below to create a count of how many of the 'oes_data' catigories
+## have been crosswalked to the 'detailed_standard_category_id'
+
+# detailed_standard_category_id %>%
+#     left_join({functional_categories_table %>% count(detailed_standard_category_id)},
+#               by = c("value" = "detailed_standard_category_id")) %>% print(n = Inf)
