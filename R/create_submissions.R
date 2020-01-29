@@ -2,7 +2,28 @@
 
 cerberus_submission_1 <- flexfile
 
-cerberus_submission_1$ReportConfiguration
+cerberus_submission_1$ReportConfiguration <- list(
+    DetailedStandardCategory = report_configuration_table %>%
+        filter(Field == "Detailed Standard Category") %>%
+        select(Value) %>%
+        pull(-1),
+    GA_AsStandardCategory = report_configuration_table %>%
+        filter(Field == "GA as Standard Category") %>%
+        select(Value) %>%
+        pull(-1),
+    FCCM_AsStandardCategory = report_configuration_table %>%
+        filter(Field == "FCCM as Standard Category") %>%
+        select(Value) %>%
+        pull(-1),
+    ForecastAtCompletion_ByNonrecurringOrRecurring = report_configuration_table %>%
+        filter(Field == "FAC by Nonrecurring/Recurring") %>%
+        select(Value) %>%
+        pull(-1),
+    ForecastAtCompletion_ByStandardCategory = report_configuration_table %>%
+        filter(Field == "FAC by Standard Category") %>%
+        select(Value) %>%
+        pull(-1)
+)
 
 cerberus_submission_1$ReportMetadata
 
@@ -52,7 +73,7 @@ cerberus_submission_1$CostHourTagDefinitions
 
 cerberus_submission_3 <- flexfile
 
-cerberus_submission_3$ReportConfiguration
+cerberus_submission_3$ReportConfiguration <- cerberus_submission_1$ReportConfiguration
 
 cerberus_submission_3$ReportMetadata
 
@@ -103,7 +124,7 @@ cerberus_submission_3$CostHourTagDefinitions
 
 cerberus_submission_5 <- flexfile
 
-cerberus_submission_5$ReportConfiguration
+cerberus_submission_5$ReportConfiguration <- cerberus_submission_1$ReportConfiguration
 
 cerberus_submission_5$ReportMetadata
 
@@ -156,7 +177,7 @@ cerberus_submission_5$CostHourTagDefinitions
 
 cerberus_submission_7 <- flexfile
 
-cerberus_submission_7$ReportConfiguration
+cerberus_submission_7$ReportConfiguration <- cerberus_submission_1$ReportConfiguration
 
 cerberus_submission_7$ReportMetadata
 
