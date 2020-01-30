@@ -17,3 +17,22 @@ events_table <- tibble::tribble(
     7L,	"Cost and Hour Report (FlexFile), Quantity Data Report", "Deliveries/Contract Complete",	            "Final",      lubridate::ymd(20220131), lubridate::ymd(20220402),
     8L,	"Technical Data Report",	                             "Deliveries/Contract Complete",	            "Final",      lubridate::ymd(20200131), lubridate::ymd(20200401)
 )
+
+# The data model's ReportCycleEnum requires the ReportCycle value to be
+# uppercase.  The below code converts the cPet produced lower case ReportCycle
+# to upper and converts them to a factor since that's how the FlexFile S3 class
+# expects to see them.
+
+events_table <- events_table %>%
+    mutate(ReportCycle = case_when(
+        ReportCycle == "Initial" | ReportCycle == "Initial" ~ "INITIAL",
+        ReportCycle == "Interim" | ReportCycle == "INTERIM" ~ "INTERIM",
+        ReportCycle == "Final"   | ReportCycle == "FINAL"   ~ "FINAL",
+        TRUE ~ NA_character_
+        )) %>%
+    mutate(ReportCycle = factor(ReportCycle,
+                                levels = c("INITIAL",
+                                           "INTERIM",
+                                           "FINAL"),
+                                ordered = TRUE)
+           )
