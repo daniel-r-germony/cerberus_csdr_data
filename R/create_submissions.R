@@ -5,24 +5,19 @@ cerberus_submission_1 <- flexfile
 cerberus_submission_1$ReportConfiguration <- list(
     DetailedStandardCategory = report_configuration_table %>%
         filter(Field == "Detailed Standard Category") %>%
-        select(Value) %>%
-        pull(-1),
+        pull(Value),
     GA_AsStandardCategory = report_configuration_table %>%
         filter(Field == "GA as Standard Category") %>%
-        select(Value) %>%
-        pull(-1),
+        pull(Value),
     FCCM_AsStandardCategory = report_configuration_table %>%
         filter(Field == "FCCM as Standard Category") %>%
-        select(Value) %>%
-        pull(-1),
+        pull(Value),
     ForecastAtCompletion_ByNonrecurringOrRecurring = report_configuration_table %>%
         filter(Field == "FAC by Nonrecurring/Recurring") %>%
-        select(Value) %>%
-        pull(-1),
+        pull(Value),
     ForecastAtCompletion_ByStandardCategory = report_configuration_table %>%
         filter(Field == "FAC by Standard Category") %>%
-        select(Value) %>%
-        pull(-1)
+        pull(Value)
 )
 
 cerberus_submission_1$ReportMetadata <- ReportMetadata

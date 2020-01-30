@@ -45,23 +45,19 @@ report_metadata_table <- tribble(
 ReportMetadata <- list(
     SecurityClassification = report_metadata_table %>%
         filter(Field == "Security Classification") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.character(),
     ProprietaryStatement = report_metadata_table %>%
         filter(Field == "Proprietary Statement") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.character(),
     ProgramName = report_metadata_table %>%
         filter(Field == "Program Name") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.character(),
     PhaseOrMilestoneID = report_metadata_table %>%
         filter(Field == "Phase or Milestone ID") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         factor(levels = c("PRE_A",
                           "A",
                           "B",
@@ -72,73 +68,59 @@ ReportMetadata <- list(
                ordered = TRUE),
     PrimeMissionProduct = report_metadata_table %>%
         filter(Field == "Prime Mission Product") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.character(),
     CommodityType = report_metadata_table %>%
         filter(Field == "Commodity Type") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.character(),
     ReportingOrganization_OrganizationName = report_metadata_table %>%
         filter(Field == "Reporting Organization/Organization Name") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.character(),
     ReportingOrganization_DivisionName = report_metadata_table %>%
         filter(Field == "Reporting Organization/Division Name") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.character(),
     ReportingOrganization_CageCode = report_metadata_table %>%
         filter(Field == "Reporting Organization/CAGE Code") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.character(),
     ReportingOrganization_Location_Street = report_metadata_table %>%
         filter(Field == "Reporting Organization/Location/Street") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.character(),
     ReportingOrganization_Location_City = report_metadata_table %>%
         filter(Field == "Reporting Organization/Location/City") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.character(),
     ReportingOrganization_Location_State = report_metadata_table %>%
         filter(Field == "Reporting Organization/Location/State") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.character(),
     ReportingOrganization_Location_ZipCode = report_metadata_table %>%
         filter(Field == "Reporting Organization/Location/Zip Code") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.character(),
     ReportingOrganization_Location_Country = report_metadata_table %>%
         filter(Field == "Reporting Organization/Location/Country") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.character(),
     ApprovedPlanNumber = report_metadata_table %>%
         filter(Field == "Approved Plan Number") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.character(),
     ApprovedPlanRevisionNumber = report_metadata_table %>%
         filter(Field == "Approved Plan Revision Number") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.character(),
     CustomerName = report_metadata_table %>%
         filter(Field == "Customer Name") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.character(),
     ContractTypeID = report_metadata_table %>%
         filter(Field == "Contract Type ID") %>%
-        select(Value) %>%
-        pull(-1) %>%
+      pull(Value) %>%
         factor(levels = c("CS",
                           "CPAF",
                           "CPFF",
@@ -161,90 +143,73 @@ ReportMetadata <- list(
                           "MULTIPLE")),
     ContractPrice = report_metadata_table %>%
         filter(Field == "Contract Price") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.numeric(),
     ContractCeiling = report_metadata_table %>%
         filter(Field == "Contract Ceiling") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.numeric(),
     ContractNumber = report_metadata_table %>%
         filter(Field == "Contract Number") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.character(),
     PeriodOfPerformance_StartDate = report_metadata_table %>%
         filter(Field == "Period of Performance/Start Date") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         lubridate::ymd(),
     PeriodOfPerformance_EndDate = report_metadata_table %>%
         filter(Field == "Period of Performance/End Date") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         lubridate::ymd(),
     ReportCycleID = report_metadata_table %>%
         filter(Field == "Report Cycle ID") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         factor(levels = c("INITIAL",
                           "INTERIM",
                           "FINAL"),
         ordered = TRUE),
     SubmissionEvent_Number = report_metadata_table %>%
         filter(Field == "Submission Event/Number") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.integer(),
     SubmissionEvent_Name = report_metadata_table %>%
         filter(Field == "Submission Event/Name") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.character(),
     SubmissionEvent_IsWildcard = report_metadata_table %>%
         filter(Field == "Submission Event/Is Wildcard") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.logical(),
     ResubmissionNumber = report_metadata_table %>%
         filter(Field == "Resubmission Number") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.integer(),
     ReportAsOf = report_metadata_table %>%
         filter(Field == "Report As Of") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         lubridate::ymd(),
     PointOfContact_Name = report_metadata_table %>%
         filter(Field == "Point of Contact/Name") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.character(),
     PointOfContact_Department = report_metadata_table %>%
         filter(Field == "Point of Contact/Department") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.character(),
     PointOfContact_TelephoneNumber = report_metadata_table %>%
         filter(Field == "Point of Contact/Telephone Number") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.character(),
     PointOfContact_EmailAddress = report_metadata_table %>%
         filter(Field == "Point of Contact/Email Address") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.character(),
     DatePrepared = report_metadata_table %>%
         filter(Field == "Date Prepared") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         lubridate::ymd(),
     ReportingPeriodID = report_metadata_table %>%
         filter(Field == "Report Period ID") %>%
-        select(Value) %>%
-        pull(-1) %>%
+        pull(Value) %>%
         as.integer()
 )
