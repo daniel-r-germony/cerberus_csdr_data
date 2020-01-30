@@ -43,27 +43,6 @@ report_metadata_table <- tribble(
     )
 
 ReportMetadata <- list(
-    #     DetailedStandardCategory = report_configuration_table %>%
-    #         filter(Field == "Detailed Standard Category") %>%
-    #         select(Value) %>%
-    #         pull(-1),
-    #     GA_AsStandardCategory = report_configuration_table %>%
-    #         filter(Field == "GA as Standard Category") %>%
-    #         select(Value) %>%
-    #         pull(-1),
-    #     FCCM_AsStandardCategory = report_configuration_table %>%
-    #         filter(Field == "FCCM as Standard Category") %>%
-    #         select(Value) %>%
-    #         pull(-1),
-    #     ForecastAtCompletion_ByNonrecurringOrRecurring = report_configuration_table %>%
-    #         filter(Field == "FAC by Nonrecurring/Recurring") %>%
-    #         select(Value) %>%
-    #         pull(-1),
-    #     ForecastAtCompletion_ByStandardCategory = report_configuration_table %>%
-    #         filter(Field == "FAC by Standard Category") %>%
-    #         select(Value) %>%
-    #         pull(-1)
-    # )
     SecurityClassification = report_metadata_table %>%
         filter(Field == "Security Classification") %>%
         select(Value) %>%
@@ -195,10 +174,16 @@ ReportMetadata <- list(
         select(Value) %>%
         pull(-1) %>%
         as.character(),
-    # NEED TO FINISH
-    PeriodOfPerformance_StartDate = lubridate::ymd(),
-    # NEED TO FINISH
-    PeriodOfPerformance_EndDate = lubridate::ymd(),
+    PeriodOfPerformance_StartDate = report_metadata_table %>%
+        filter(Field == "Period of Performance/Start Date") %>%
+        select(Value) %>%
+        pull(-1) %>%
+        lubridate::ymd(),
+    PeriodOfPerformance_EndDate = report_metadata_table %>%
+        filter(Field == "Period of Performance/End Date") %>%
+        select(Value) %>%
+        pull(-1) %>%
+        lubridate::ymd(),
     ReportCycleID = report_metadata_table %>%
         filter(Field == "Report Cycle ID") %>%
         select(Value) %>%
@@ -227,8 +212,11 @@ ReportMetadata <- list(
         select(Value) %>%
         pull(-1) %>%
         as.integer(),
-    # NEED TO FINISH
-    ReportAsOf = lubridate::ymd(),
+    ReportAsOf = report_metadata_table %>%
+        filter(Field == "Report As Of") %>%
+        select(Value) %>%
+        pull(-1) %>%
+        lubridate::ymd(),
     PointOfContact_Name = report_metadata_table %>%
         filter(Field == "Point of Contact/Name") %>%
         select(Value) %>%
@@ -249,8 +237,11 @@ ReportMetadata <- list(
         select(Value) %>%
         pull(-1) %>%
         as.character(),
-    # NEED TO FINISH
-    DatePrepared = lubridate::ymd(),
+    DatePrepared = report_metadata_table %>%
+        filter(Field == "Date Prepared") %>%
+        select(Value) %>%
+        pull(-1) %>%
+        lubridate::ymd(),
     ReportingPeriodID = report_metadata_table %>%
         filter(Field == "Report Period ID") %>%
         select(Value) %>%
