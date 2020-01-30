@@ -25,14 +25,37 @@ cerberus_submission_1$ReportConfiguration <- list(
         pull(-1)
 )
 
-cerberus_submission_1$ReportMetadata
+cerberus_submission_1$ReportMetadata <- ReportMetadata
+
+cerberus_submission_1$ReportMetadata$ContractPrice <- NA # Create based on FAC + some %
+
+cerberus_submission_1$ReportMetadata$PeriodOfPerformance_StartDate <- NA #LOOKUP IN REPORTING CAL TABLE
+
+cerberus_submission_1$ReportMetadata$PeriodOfPerformance_EndDate <- NA #LOOKUP IN REPORTING CAL TABLE
+
+cerberus_submission_1$ReportMetadata$SubmissionEvent_Number <- 1L
+
+cerberus_submission_1$ReportMetadata$ReportCycleID <- events_table %>%
+    filter(EventID == cerberus_submission_1$ReportMetadata$SubmissionEvent_Number) %>%
+    pull(ReportCycle)
+
+cerberus_submission_1$ReportMetadata$SubmissionEvent_Name <- events_table %>%
+    filter(EventID == cerberus_submission_1$ReportMetadata$SubmissionEvent_Number) %>%
+    pull(SubmissionEventName)
+
+cerberus_submission_1$ReportMetadata$ReportAsOf <- order_or_lots_table %>%
+    slice(1) %>%
+    pull(PeriodOfPerformance_StartDate)
 
 cerberus_submission_1$OrdersOrLots <-
     cerberus_submission_1$OrdersOrLots %>%
     right_join(order_or_lots_table)
 
-cerberus_submission_1$CLINs <-
-    clin_table %>%
+cerberus_submission_1$ReportMetadata$DatePrepared <- order_or_lots_table %>%
+    slice(1) %>%
+    pull(PeriodOfPerformance_StartDate) + 15
+
+cerberus_submission_1$CLINs <- clin_table %>%
     filter(str_detect(ID, pattern = "^0"))
 
 cerberus_submission_1$EndItems <- end_item_table
