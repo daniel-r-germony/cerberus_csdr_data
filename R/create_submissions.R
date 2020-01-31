@@ -125,7 +125,7 @@ cerberus_submission_3$ReportMetadata$SubmissionEvent_Name <- events_table %>%
 
 cerberus_submission_3$ReportMetadata$ReportAsOf <- order_or_lots_table %>%
     slice(2) %>%
-    pull(PeriodOfPerformance_StartDate)
+    pull(PeriodOfPerformance_EndDate)
 
 cerberus_submission_3$OrdersOrLots <-
     cerberus_submission_3$OrdersOrLots %>%
@@ -133,7 +133,7 @@ cerberus_submission_3$OrdersOrLots <-
 
 cerberus_submission_3$ReportMetadata$DatePrepared <- order_or_lots_table %>%
     slice(2) %>%
-    pull(PeriodOfPerformance_StartDate) + 15
+    pull(PeriodOfPerformance_EndDate) + 15
 
 cerberus_submission_3$OrdersOrLots <-
     cerberus_submission_3$OrdersOrLots %>%
@@ -208,7 +208,7 @@ cerberus_submission_5$ReportMetadata$SubmissionEvent_Name <- events_table %>%
 
 cerberus_submission_5$ReportMetadata$ReportAsOf <- order_or_lots_table %>%
     slice(3) %>%
-    pull(PeriodOfPerformance_StartDate)
+    pull(PeriodOfPerformance_EndDate)
 
 cerberus_submission_5$OrdersOrLots <-
     cerberus_submission_5$OrdersOrLots %>%
@@ -216,7 +216,7 @@ cerberus_submission_5$OrdersOrLots <-
 
 cerberus_submission_5$ReportMetadata$DatePrepared <- order_or_lots_table %>%
     slice(3) %>%
-    pull(PeriodOfPerformance_StartDate) + 15
+    pull(PeriodOfPerformance_EndDate) + 15
 
 cerberus_submission_5$OrdersOrLots <-
     cerberus_submission_5$OrdersOrLots %>%
@@ -293,7 +293,7 @@ cerberus_submission_7$ReportMetadata$SubmissionEvent_Name <- events_table %>%
 
 cerberus_submission_7$ReportMetadata$ReportAsOf <- order_or_lots_table %>%
     slice(4) %>%
-    pull(PeriodOfPerformance_StartDate)
+    pull(PeriodOfPerformance_EndDate)
 
 cerberus_submission_7$OrdersOrLots <-
     cerberus_submission_7$OrdersOrLots %>%
@@ -301,7 +301,7 @@ cerberus_submission_7$OrdersOrLots <-
 
 cerberus_submission_7$ReportMetadata$DatePrepared <- order_or_lots_table %>%
     slice(4) %>%
-    pull(PeriodOfPerformance_StartDate) + 15
+    pull(PeriodOfPerformance_EndDate) + 15
 
 cerberus_submission_7$OrdersOrLots <-
     cerberus_submission_7$OrdersOrLots %>%
