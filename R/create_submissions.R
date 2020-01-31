@@ -65,7 +65,7 @@ cerberus_submission_1$EndItems <- end_item_table
 
 cerberus_submission_1$WBS <- wbs_table
 
-cerberus_submission_1$Accounts
+cerberus_submission_1$Accounts # Will be empty since $0 have been incurred at contract award
 
 cerberus_submission_1$FunctionalCategories <-
     functional_categories_table %>%
@@ -73,13 +73,13 @@ cerberus_submission_1$FunctionalCategories <-
 
 cerberus_submission_1$FunctionalOverheadCategories
 
-cerberus_submission_1$UnitsOrSublots
+cerberus_submission_1$UnitsOrSublots # Will be empty since $0 have been incurred at contract award
 
-cerberus_submission_1$ReportingCalendar
+cerberus_submission_1$ReportingCalendar <- reporting_calendar_table
 
 cerberus_submission_1$SummaryCostData
 
-cerberus_submission_1$ActualCostHourData
+cerberus_submission_1$ActualCostHourData # Will be empty since $0 have been incurred at contract award
 
 cerberus_submission_1$ForecastAtCompletionCostHourData
 
@@ -156,9 +156,10 @@ cerberus_submission_3$FunctionalCategories <-
 
 cerberus_submission_3$FunctionalOverheadCategories
 
-cerberus_submission_3$UnitsOrSublots
+cerberus_submission_3$UnitsOrSublots <- units_or_sublots %>%
+    filter(OrderOrLotID %in% c("1_BA", "2_L1"))
 
-cerberus_submission_3$ReportingCalendar
+cerberus_submission_3$ReportingCalendar <- reporting_calendar_table
 
 cerberus_submission_3$SummaryCostData
 
@@ -240,9 +241,10 @@ cerberus_submission_5$FunctionalCategories <-
 
 cerberus_submission_5$FunctionalOverheadCategories
 
-cerberus_submission_5$UnitsOrSublots
+cerberus_submission_5$UnitsOrSublots <- units_or_sublots %>%
+    filter(OrderOrLotID %in% c("1_BA", "2_L1", "3_L2"))
 
-cerberus_submission_5$ReportingCalendar
+cerberus_submission_5$ReportingCalendar <- reporting_calendar_table
 
 cerberus_submission_5$SummaryCostData
 
@@ -292,7 +294,7 @@ cerberus_submission_7$ReportMetadata$SubmissionEvent_Name <- events_table %>%
     pull(SubmissionEventName)
 
 cerberus_submission_7$ReportMetadata$ReportAsOf <- order_or_lots_table %>%
-    slice(4) %>%
+    slice(5) %>%
     pull(PeriodOfPerformance_EndDate)
 
 cerberus_submission_7$OrdersOrLots <-
@@ -300,7 +302,7 @@ cerberus_submission_7$OrdersOrLots <-
     right_join(order_or_lots_table)
 
 cerberus_submission_7$ReportMetadata$DatePrepared <- order_or_lots_table %>%
-    slice(4) %>%
+    slice(5) %>%
     pull(PeriodOfPerformance_EndDate) + 15
 
 cerberus_submission_7$OrdersOrLots <-
@@ -328,9 +330,9 @@ cerberus_submission_7$FunctionalCategories <-
 
 cerberus_submission_7$FunctionalOverheadCategories
 
-cerberus_submission_7$UnitsOrSublots
+cerberus_submission_7$UnitsOrSublots <- units_or_sublots
 
-cerberus_submission_7$ReportingCalendar
+cerberus_submission_7$ReportingCalendar <- reporting_calendar_table
 
 cerberus_submission_7$SummaryCostData
 
