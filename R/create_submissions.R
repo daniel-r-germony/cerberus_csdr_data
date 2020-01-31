@@ -91,7 +91,7 @@ cerberus_submission_1$SummaryRemarks
 
 cerberus_submission_1$WBSElementRemarks
 
-cerberus_submission_1$WBSDictionaryDefinitions
+cerberus_submission_1$WBSDictionaryDefinitions <- wbs_dictionary_definitions_table
 
 cerberus_submission_1$CostHourTagDefinitions
 
@@ -175,7 +175,7 @@ cerberus_submission_3$SummaryRemarks
 
 cerberus_submission_3$WBSElementRemarks
 
-cerberus_submission_3$WBSDictionaryDefinitions
+cerberus_submission_3$WBSDictionaryDefinitions <- wbs_dictionary_definitions_table
 
 cerberus_submission_3$CostHourTagDefinitions
 
@@ -260,7 +260,7 @@ cerberus_submission_5$SummaryRemarks
 
 cerberus_submission_5$WBSElementRemarks
 
-cerberus_submission_5$WBSDictionaryDefinitions
+cerberus_submission_5$WBSDictionaryDefinitions <- wbs_dictionary_definitions_table
 
 cerberus_submission_5$CostHourTagDefinitions
 
@@ -348,6 +348,6 @@ cerberus_submission_7$SummaryRemarks
 
 cerberus_submission_7$WBSElementRemarks
 
-cerberus_submission_7$WBSDictionaryDefinitions
+cerberus_submission_7$WBSDictionaryDefinitions <- wbs_dictionary_definitions_table
 
 cerberus_submission_7$CostHourTagDefinitions
