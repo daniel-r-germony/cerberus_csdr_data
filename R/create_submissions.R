@@ -24,9 +24,14 @@ cerberus_submission_1$ReportMetadata <- ReportMetadata
 
 cerberus_submission_1$ReportMetadata$ContractPrice <- NA # Create based on FAC + some %
 
-cerberus_submission_1$ReportMetadata$PeriodOfPerformance_StartDate <- NA #LOOKUP IN REPORTING CAL TABLE
+# PoP start and end for submission 1 are the same since it is as of contract award.
+cerberus_submission_1$ReportMetadata$PeriodOfPerformance_StartDate <- order_or_lots_table %>%
+    slice(1) %>%
+    pull(PeriodOfPerformance_StartDate)
 
-cerberus_submission_1$ReportMetadata$PeriodOfPerformance_EndDate <- NA #LOOKUP IN REPORTING CAL TABLE
+cerberus_submission_1$ReportMetadata$PeriodOfPerformance_EndDate <- order_or_lots_table %>%
+    slice(1) %>%
+    pull(PeriodOfPerformance_StartDate)
 
 cerberus_submission_1$ReportMetadata$SubmissionEvent_Number <- 1L
 
@@ -46,9 +51,12 @@ cerberus_submission_1$OrdersOrLots <-
     cerberus_submission_1$OrdersOrLots %>%
     right_join(order_or_lots_table)
 
+# The date preapred for the initial submission is before its as of date since it
+# would have been prepared for the proposal which clearly has to have been
+# completed prior to contract award.
 cerberus_submission_1$ReportMetadata$DatePrepared <- order_or_lots_table %>%
     slice(1) %>%
-    pull(PeriodOfPerformance_StartDate) + 15
+    pull(PeriodOfPerformance_StartDate) - 15
 
 cerberus_submission_1$CLINs <- clin_table %>%
     filter(str_detect(ID, pattern = "^0"))
@@ -93,7 +101,39 @@ cerberus_submission_3 <- flexfile
 
 cerberus_submission_3$ReportConfiguration <- cerberus_submission_1$ReportConfiguration
 
-cerberus_submission_3$ReportMetadata
+cerberus_submission_1$ReportMetadata <- ReportMetadata
+
+cerberus_submission_3$ReportMetadata$ContractPrice <- NA # Create based on FAC + some %
+
+cerberus_submission_3$ReportMetadata$PeriodOfPerformance_StartDate <- order_or_lots_table %>%
+    slice(1) %>%
+    pull(PeriodOfPerformance_StartDate)
+
+cerberus_submission_3$ReportMetadata$PeriodOfPerformance_EndDate <- events_table %>%
+    slice(3) %>%
+    pull(AsOfDate)
+
+cerberus_submission_3$ReportMetadata$SubmissionEvent_Number <- 3L
+
+cerberus_submission_3$ReportMetadata$ReportCycleID <- events_table %>%
+    filter(EventID == cerberus_submission_3$ReportMetadata$SubmissionEvent_Number) %>%
+    pull(ReportCycle)
+
+cerberus_submission_3$ReportMetadata$SubmissionEvent_Name <- events_table %>%
+    filter(EventID == cerberus_submission_3$ReportMetadata$SubmissionEvent_Number) %>%
+    pull(SubmissionEventName)
+
+cerberus_submission_3$ReportMetadata$ReportAsOf <- order_or_lots_table %>%
+    slice(2) %>%
+    pull(PeriodOfPerformance_StartDate)
+
+cerberus_submission_3$OrdersOrLots <-
+    cerberus_submission_3$OrdersOrLots %>%
+    right_join(order_or_lots_table)
+
+cerberus_submission_3$ReportMetadata$DatePrepared <- order_or_lots_table %>%
+    slice(2) %>%
+    pull(PeriodOfPerformance_StartDate) + 15
 
 cerberus_submission_3$OrdersOrLots <-
     cerberus_submission_3$OrdersOrLots %>%
@@ -145,6 +185,38 @@ cerberus_submission_5 <- flexfile
 cerberus_submission_5$ReportConfiguration <- cerberus_submission_1$ReportConfiguration
 
 cerberus_submission_5$ReportMetadata
+
+cerberus_submission_5$ReportMetadata$ContractPrice <- NA # Create based on FAC + some %
+
+cerberus_submission_5$ReportMetadata$PeriodOfPerformance_StartDate <- order_or_lots_table %>%
+    slice(2) %>%
+    pull(PeriodOfPerformance_StartDate)
+
+cerberus_submission_5$ReportMetadata$PeriodOfPerformance_EndDate <- events_table %>%
+    slice(5) %>%
+    pull(AsOfDate)
+
+cerberus_submission_5$ReportMetadata$SubmissionEvent_Number <- 5L
+
+cerberus_submission_5$ReportMetadata$ReportCycleID <- events_table %>%
+    filter(EventID == cerberus_submission_5$ReportMetadata$SubmissionEvent_Number) %>%
+    pull(ReportCycle)
+
+cerberus_submission_5$ReportMetadata$SubmissionEvent_Name <- events_table %>%
+    filter(EventID == cerberus_submission_5$ReportMetadata$SubmissionEvent_Number) %>%
+    pull(SubmissionEventName)
+
+cerberus_submission_5$ReportMetadata$ReportAsOf <- order_or_lots_table %>%
+    slice(3) %>%
+    pull(PeriodOfPerformance_StartDate)
+
+cerberus_submission_5$OrdersOrLots <-
+    cerberus_submission_5$OrdersOrLots %>%
+    right_join(order_or_lots_table)
+
+cerberus_submission_5$ReportMetadata$DatePrepared <- order_or_lots_table %>%
+    slice(3) %>%
+    pull(PeriodOfPerformance_StartDate) + 15
 
 cerberus_submission_5$OrdersOrLots <-
     cerberus_submission_5$OrdersOrLots %>%
@@ -198,6 +270,38 @@ cerberus_submission_7 <- flexfile
 cerberus_submission_7$ReportConfiguration <- cerberus_submission_1$ReportConfiguration
 
 cerberus_submission_7$ReportMetadata
+
+cerberus_submission_7$ReportMetadata$ContractPrice <- NA # Create based on FAC + some %
+
+cerberus_submission_7$ReportMetadata$PeriodOfPerformance_StartDate <- order_or_lots_table %>%
+    slice(4) %>%
+    pull(PeriodOfPerformance_StartDate)
+
+cerberus_submission_7$ReportMetadata$PeriodOfPerformance_EndDate <- events_table %>%
+    slice(8) %>%
+    pull(AsOfDate)
+
+cerberus_submission_7$ReportMetadata$SubmissionEvent_Number <- 7L
+
+cerberus_submission_7$ReportMetadata$ReportCycleID <- events_table %>%
+    filter(EventID == cerberus_submission_7$ReportMetadata$SubmissionEvent_Number) %>%
+    pull(ReportCycle)
+
+cerberus_submission_7$ReportMetadata$SubmissionEvent_Name <- events_table %>%
+    filter(EventID == cerberus_submission_7$ReportMetadata$SubmissionEvent_Number) %>%
+    pull(SubmissionEventName)
+
+cerberus_submission_7$ReportMetadata$ReportAsOf <- order_or_lots_table %>%
+    slice(4) %>%
+    pull(PeriodOfPerformance_StartDate)
+
+cerberus_submission_7$OrdersOrLots <-
+    cerberus_submission_7$OrdersOrLots %>%
+    right_join(order_or_lots_table)
+
+cerberus_submission_7$ReportMetadata$DatePrepared <- order_or_lots_table %>%
+    slice(4) %>%
+    pull(PeriodOfPerformance_StartDate) + 15
 
 cerberus_submission_7$OrdersOrLots <-
     cerberus_submission_7$OrdersOrLots %>%
