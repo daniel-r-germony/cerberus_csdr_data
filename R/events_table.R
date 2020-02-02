@@ -14,8 +14,8 @@ events_table <- tibble::tribble(
     4L,	"Technical Data Report",	                             "Delivery of all First Article Test Vehicles",	"Interim",    lubridate::ymd(20200831), lubridate::ymd(20201031),
     5L,	"Cost and Hour Report (FlexFile), Quantity Data Report", "Complete LRIP Deliveries",	                "Interim",    lubridate::ymd(20210228), lubridate::ymd(20210430),
     6L,	"Technical Data Report",	                             "Complete LRIP Deliveries",	                "Interim",    lubridate::ymd(20210228), lubridate::ymd(20210430),
-    7L,	"Cost and Hour Report (FlexFile), Quantity Data Report", "Deliveries/Contract Complete",	            "Final",      lubridate::ymd(20220131), lubridate::ymd(20220402),
-    8L,	"Technical Data Report",	                             "Deliveries/Contract Complete",	            "Final",      lubridate::ymd(20200131), lubridate::ymd(20200401)
+    7L,	"Cost and Hour Report (FlexFile), Quantity Data Report", "Deliveries/Contract Complete",	            "Final",      lubridate::ymd(20220430), lubridate::ymd(20220630),
+    8L,	"Technical Data Report",	                             "Deliveries/Contract Complete",	            "Final",      lubridate::ymd(20220430), lubridate::ymd(20220630)
 )
 
 # The data model's ReportCycleEnum requires the ReportCycle value to be
