@@ -113,7 +113,7 @@ cerberus_submission_3 <- flexfile
 
 cerberus_submission_3$ReportConfiguration <- cerberus_submission_1$ReportConfiguration
 
-cerberus_submission_1$ReportMetadata <- ReportMetadata
+cerberus_submission_3$ReportMetadata <- ReportMetadata
 
 cerberus_submission_3$ReportMetadata$ContractPrice <- NA # Create based on FAC + some %
 
@@ -205,7 +205,7 @@ cerberus_submission_5 <- flexfile
 
 cerberus_submission_5$ReportConfiguration <- cerberus_submission_1$ReportConfiguration
 
-cerberus_submission_5$ReportMetadata
+cerberus_submission_5$ReportMetadata <- ReportMetadata
 
 cerberus_submission_5$ReportMetadata$ContractPrice <- NA # Create based on FAC + some %
 
@@ -299,7 +299,7 @@ cerberus_submission_7 <- flexfile
 
 cerberus_submission_7$ReportConfiguration <- cerberus_submission_1$ReportConfiguration
 
-cerberus_submission_7$ReportMetadata
+cerberus_submission_7$ReportMetadata <- ReportMetadata
 
 cerberus_submission_7$ReportMetadata$ContractPrice <- NA # Create based on FAC + some %
 
@@ -308,7 +308,7 @@ cerberus_submission_7$ReportMetadata$PeriodOfPerformance_StartDate <- order_or_l
     pull(PeriodOfPerformance_StartDate)
 
 cerberus_submission_7$ReportMetadata$PeriodOfPerformance_EndDate <- events_table %>%
-    slice(8) %>%
+    slice(7) %>%
     pull(AsOfDate)
 
 cerberus_submission_7$ReportMetadata$SubmissionEvent_Number <- 7L
