@@ -71,7 +71,9 @@ cerberus_submission_1$FunctionalCategories <-
     functional_categories_table %>%
     select(-detailed_standard_category_id)
 
-cerberus_submission_1$FunctionalOverheadCategories
+cerberus_submission_1$FunctionalOverheadCategories <-
+    functional_categories_table %>%
+    filter(str_ends(detailed_standard_category_id, "OVERHEAD"))
 
 cerberus_submission_1$UnitsOrSublots # Will be empty since $0 have been incurred at contract award
 
@@ -87,7 +89,7 @@ cerberus_submission_1$AllocationMethods
 
 cerberus_submission_1$AllocationComponents
 
-cerberus_submission_1$SummaryRemarks
+cerberus_submission_1$SummaryRemarks # Will be empty since $0 have been incurred at contract award
 
 cerberus_submission_1$WBSElementRemarks
 
@@ -154,7 +156,9 @@ cerberus_submission_3$FunctionalCategories <-
     functional_categories_table %>%
     select(-detailed_standard_category_id)
 
-cerberus_submission_3$FunctionalOverheadCategories
+cerberus_submission_3$FunctionalOverheadCategories <-
+    functional_categories_table %>%
+    filter(str_ends(detailed_standard_category_id, "OVERHEAD"))
 
 cerberus_submission_3$UnitsOrSublots <- units_or_sublots %>%
     filter(OrderOrLotID %in% c("1_BA", "2_L1"))
@@ -171,7 +175,8 @@ cerberus_submission_3$AllocationMethods
 
 cerberus_submission_3$AllocationComponents
 
-cerberus_submission_3$SummaryRemarks
+cerberus_submission_3$SummaryRemarks <- summary_remarks %>%
+    filter(OrderOrLotID %in% c("1_BA", "2_L1"))
 
 cerberus_submission_3$WBSElementRemarks
 
@@ -239,7 +244,9 @@ cerberus_submission_5$FunctionalCategories <-
     functional_categories_table %>%
     select(-detailed_standard_category_id)
 
-cerberus_submission_5$FunctionalOverheadCategories
+cerberus_submission_5$FunctionalOverheadCategories <-
+    functional_categories_table %>%
+    filter(str_ends(detailed_standard_category_id, "OVERHEAD"))
 
 cerberus_submission_5$UnitsOrSublots <- units_or_sublots %>%
     filter(OrderOrLotID %in% c("1_BA", "2_L1", "3_L2"))
@@ -256,7 +263,8 @@ cerberus_submission_5$AllocationMethods
 
 cerberus_submission_5$AllocationComponents
 
-cerberus_submission_5$SummaryRemarks
+cerberus_submission_5$SummaryRemarks <- summary_remarks %>%
+    filter(OrderOrLotID %in% c("1_BA", "2_L1", "3_L2"))
 
 cerberus_submission_5$WBSElementRemarks
 
@@ -328,7 +336,9 @@ cerberus_submission_7$FunctionalCategories <-
     functional_categories_table %>%
     select(-detailed_standard_category_id)
 
-cerberus_submission_7$FunctionalOverheadCategories
+cerberus_submission_7$FunctionalOverheadCategories <-
+    functional_categories_table %>%
+    filter(str_ends(detailed_standard_category_id, "OVERHEAD"))
 
 cerberus_submission_7$UnitsOrSublots <- units_or_sublots
 
@@ -344,7 +354,7 @@ cerberus_submission_7$AllocationMethods
 
 cerberus_submission_7$AllocationComponents
 
-cerberus_submission_7$SummaryRemarks
+cerberus_submission_7$SummaryRemarks <- summary_remarks
 
 cerberus_submission_7$WBSElementRemarks
 
