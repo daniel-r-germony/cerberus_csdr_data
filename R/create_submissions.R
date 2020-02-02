@@ -80,8 +80,7 @@ cerberus_submission_1$FunctionalCategories <-
     select(-detailed_standard_category_id)
 
 cerberus_submission_1$FunctionalOverheadCategories <-
-    functional_categories_table %>%
-    filter(str_ends(detailed_standard_category_id, "OVERHEAD"))
+    functional_overhead_categories_table
 
 cerberus_submission_1$UnitsOrSublots # Will be empty since $0 have been incurred at contract award
 
@@ -171,8 +170,7 @@ cerberus_submission_3$FunctionalCategories <-
     select(-detailed_standard_category_id)
 
 cerberus_submission_3$FunctionalOverheadCategories <-
-    functional_categories_table %>%
-    filter(str_ends(detailed_standard_category_id, "OVERHEAD"))
+    functional_overhead_categories_table
 
 cerberus_submission_3$UnitsOrSublots <- units_or_sublots %>%
     filter(OrderOrLotID %in% c("1_BA", "2_L1"))
@@ -264,8 +262,7 @@ cerberus_submission_5$FunctionalCategories <-
     select(-detailed_standard_category_id)
 
 cerberus_submission_5$FunctionalOverheadCategories <-
-    functional_categories_table %>%
-    filter(str_ends(detailed_standard_category_id, "OVERHEAD"))
+    functional_overhead_categories_table
 
 cerberus_submission_5$UnitsOrSublots <- units_or_sublots %>%
     filter(OrderOrLotID %in% c("1_BA", "2_L1", "3_L2"))
@@ -361,8 +358,7 @@ cerberus_submission_7$FunctionalCategories <-
     select(-detailed_standard_category_id)
 
 cerberus_submission_7$FunctionalOverheadCategories <-
-    functional_categories_table %>%
-    filter(str_ends(detailed_standard_category_id, "OVERHEAD"))
+    functional_overhead_categories_table
 
 cerberus_submission_7$UnitsOrSublots <- units_or_sublots
 
