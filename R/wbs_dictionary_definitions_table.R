@@ -1,7 +1,6 @@
 
 library(purrr)
 library(tibble)
-library(stringi)
 
 wbs_dictionary_definitions_table <- tibble(
     WBSElementID = wbs_table$ID,
