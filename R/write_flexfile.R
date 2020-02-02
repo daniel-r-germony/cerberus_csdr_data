@@ -41,7 +41,7 @@ write_flexfile <- function(flexfile_to_write,
         stop('`output_format` currently only supports Excel.\nUse `output_format = "Excel"`',
              call. = FALSE
         )
-    }
+    } else {
 
     part_1_filename <- dplyr::if_else(
         condition = output_filename == "",
@@ -111,6 +111,8 @@ write_flexfile <- function(flexfile_to_write,
     # Use {openxlsx} to write the flexfile object data into the Excel files
     # #########################################################################
 
+    # PART 1 ------------------------------------------------------------------
+
     part1 <- openxlsx::loadWorkbook(file = part_1_output_path)
 
     openxlsx::writeData(part1, sheet = "Report Configuration",
@@ -122,23 +124,154 @@ write_flexfile <- function(flexfile_to_write,
                         startRow = 3,
                         colNames = FALSE)
 
-    # openxlsx::writeData(part1, sheet = "Report Metadata",
-    #                     x = flexfile_to_write$ReportMetadata %>%
-    #                         enframe() %>%
-    #                         unnest(value) %>%
-    #                         select(value),
-    #                     startCol = 1,
-    #                     startRow = 3,
-    #                     colNames = FALSE)
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$SecurityClassification,
+                        xy = c("B", 3)) # Security Classification
 
-    openxlsx::writeData(part1, sheet = "CLINs",
-                        x = flexfile_to_write$CLINs,
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$ProprietaryStatement,
+                        xy = c("B", 4))
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$ProgramName,
+                        xy = c("B", 5))	# Program Name
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$PhaseOrMilestoneID,
+                        xy = c("B", 6))	# Phase or Milestone ID
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$PrimeMissionProduct,
+                        xy = c("B", 7))	# Prime Mission Product
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$CommodityType,
+                        xy = c("B", 8))	# Commodity Type
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$ReportingOrganization_OrganizationName,
+                        xy = c("B", 9))	# Reporting Organization/Organization Name
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$ReportingOrganization_DivisionName,
+                        xy = c("B", 10)) # Reporting Organization/Division Name
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$ReportingOrganization_CageCode,
+                        xy = c("B", 11)) # Reporting Organization/CAGE Code
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$ReportingOrganization_Location_Street,
+                        xy = c("B", 12)) # Reporting Organization/Location/Street
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$ReportingOrganization_Location_City,
+                        xy = c("B", 13)) # Reporting Organization/Location/City
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$ReportingOrganization_Location_State,
+                        xy = c("B", 14)) # Reporting Organization/Location/State
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$ReportingOrganization_Location_ZipCode,
+                        xy = c("B", 15)) # Reporting Organization/Location/Zip Code
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$ReportingOrganization_Location_Country,
+                        xy = c("B", 16)) # Reporting Organization/Location/Country
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$ApprovedPlanNumber,
+                        xy = c("B", 17)) # Approved Plan Number
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$ApprovedPlanRevisionNumber,
+                        xy = c("B", 18)) # Approved Plan Revision Number
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$CustomerName,
+                        xy = c("B", 19)) # Customer Name
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$ContractTypeID,
+                        xy = c("B", 20)) # Contract Type ID
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$ContractPrice,
+                        xy = c("B", 21)) # Contract Price
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$ContractCeiling,
+                        xy = c("B", 22)) # Contract Ceiling
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$ContractNumber,
+                        xy = c("B", 23)) # Contract Number
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$PeriodOfPerformance_StartDate,
+                        xy = c("B", 24)) # Period of Performance/Start Date
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$PeriodOfPerformance_EndDate,
+                        xy = c("B", 25)) # Period of Performance/End Date
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$ReportCycleID,
+                        xy = c("B", 26)) # Report Cycle ID
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$SubmissionEvent_Number,
+                        xy = c("B", 27)) # Submission Event/Number
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$SubmissionEvent_Name,
+                        xy = c("B", 28)) # Submission Event/Name
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadataSubmissionEvent_IsWildcard,
+                        xy = c("B", 29)) # Submission Event/Is Wildcard
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$ResubmissionNumber,
+                        xy = c("B", 30)) # Resubmission Number
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$ReportAsOf,
+                        xy = c("B", 31)) # Report As Of
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$PointOfContact_Name,
+                        xy = c("B", 32)) # Point of Contact/Name
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$PointOfContact_Department,
+                        xy = c("B", 33)) # Point of Contact/Department
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$PointOfContact_TelephoneNumber,
+                        xy = c("B", 34)) # Point of Contact/Telephone Number
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$PointOfContact_EmailAddress,
+                        xy = c("B", 35)) # Point of Contact/Email Address
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$DatePrepared,
+                        xy = c("B", 36)) # Date Prepared
+
+    openxlsx::writeData(part1, sheet = "Report Metadata",
+                        x = flexfile_to_write$ReportMetadata$ReportingPeriodID,
+                        xy = c("B", 37)) # Report Period ID
+
+    openxlsx::writeData(part1, sheet = "Orders or Lots",
+                        x = flexfile_to_write$OrdersOrLots,
                         startCol = 1,
                         startRow = 3,
                         colNames = FALSE)
 
-    openxlsx::writeData(part1, sheet = "Orders or Lots",
-                        x = flexfile_to_write$OrdersOrLots,
+    openxlsx::writeData(part1, sheet = "CLINs",
+                        x = flexfile_to_write$CLINs,
                         startCol = 1,
                         startRow = 3,
                         colNames = FALSE)
@@ -205,16 +338,58 @@ write_flexfile <- function(flexfile_to_write,
 
     saveWorkbook(part1, file = part_1_output_path, overwrite = TRUE)
 
-}
+    rm(part1)
 
-#  # proof of concept
-# cerberus_submission_7 %>%
-#   write_flexfile(output_path = here::here("data"),
-#   output_filename = "Cerberus Submission 1",
-#   output_format = "Excel")
-# #
-#
-# part1 <- openxlsx::loadWorkbook(file = here::here("data", "Cerberus Submission 1 - Part 1.xlsx"))
-# openxlsx::writeData(part1, sheet = "CLINs", x = cerberus_submission_1$CLINs, startCol = 1, startRow = 3, colNames = FALSE)
-# saveWorkbook(part1, file = here::here("data", "Cerberus Submission 1 - Part 1.xlsx"), overwrite = TRUE)
+    # PART 2 ------------------------------------------------------------------
 
+    part2 <- openxlsx::loadWorkbook(file = part_2_output_path)
+
+    openxlsx::writeData(part2, sheet = "Actual Cost-Hour Data",
+                        x = flexfile_to_write$ActualCostHourData,
+                        startCol = 1,
+                        startRow = 3,
+                        colNames = FALSE)
+
+    saveWorkbook(part2, file = part_2_output_path, overwrite = TRUE)
+
+    rm(part2)
+
+    # PART 3 ------------------------------------------------------------------
+
+    part3 <- openxlsx::loadWorkbook(file = part_3_output_path)
+
+    openxlsx::writeData(part3, sheet = "FAC Cost-Hour Data",
+                        x = flexfile_to_write$ForecastAtCompletionCostHourData,
+                        startCol = 1,
+                        startRow = 3,
+                        colNames = FALSE)
+
+    openxlsx::writeData(part3, sheet = "Summary Remarks",
+                        x = flexfile_to_write$SummaryRemarks,
+                        startCol = 1,
+                        startRow = 3,
+                        colNames = FALSE)
+
+    openxlsx::writeData(part3, sheet = "WBS Element Remarks",
+                        x = flexfile_to_write$WBSElementRemark,
+                        startCol = 1,
+                        startRow = 3,
+                        colNames = FALSE)
+
+    openxlsx::writeData(part3, sheet = "WBS Dictionary Definitions",
+                        x = flexfile_to_write$WBSDictionaryDefinitions,
+                        startCol = 1,
+                        startRow = 3,
+                        colNames = FALSE)
+
+    openxlsx::writeData(part3, sheet = "Cost-Hour Tag Definitions",
+                        x = flexfile_to_write$CostHourTagDefinitions,
+                        startCol = 1,
+                        startRow = 3,
+                        colNames = FALSE)
+
+    saveWorkbook(part3, file = part_3_output_path, overwrite = TRUE)
+
+    rm(part3)
+
+}}
