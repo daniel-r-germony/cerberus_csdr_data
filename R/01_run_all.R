@@ -1,4 +1,7 @@
 
+# Reminder: Use the "Source" button to run these so that the download requests
+# work correctly.
+
 source(here::here("R", "read_soc_defs.R"))
 source(here::here("R", "read_ose_data.R"))
 source(here::here("R", "define_classes.R"))
