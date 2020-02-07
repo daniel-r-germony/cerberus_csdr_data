@@ -626,3 +626,23 @@ nonrecurring_hours <- bind_rows(
     hours_mat_movers_nr
 ) %>% filter(Value_Hours > 0)
 
+# Join hourly_rate
+nonrecurring_hours <- oes_data %>% select(occ_code, "hourly_rate" = h_mean) %>%
+    mutate(hourly_rate = as.numeric(hourly_rate)) %>%
+    left_join(nonrecurring_hours,
+              .,
+              by = c("ID" = "occ_code"))
+
+# Mutate the constant hourly_rate with an inflation_rate
+nonrecurring_hours <- inflation_table %>%
+    select(StartDate, inflation_rate) %>%
+    left_join(nonrecurring_hours,
+              .,
+              by = c("StartDate" = "StartDate")) %>%
+    mutate(hourly_rate = hourly_rate * inflation_rate)
+
+# Create the Value_Dollars column and drop the unneeded columns
+nonrecurring_hours <- nonrecurring_hours %>%
+    mutate("Value_Dollars" = Value_Hours * hourly_rate) %>%
+    select(-hourly_rate,
+           -inflation_rate)
