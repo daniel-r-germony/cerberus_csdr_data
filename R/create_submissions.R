@@ -73,8 +73,6 @@ cerberus_submission_1$EndItems <- end_item_table
 
 cerberus_submission_1$WBS <- wbs_table
 
-cerberus_submission_1$Accounts # Will be empty since $0 have been incurred at contract award
-
 cerberus_submission_1$FunctionalCategories <-
     functional_categories_table %>%
     select(-detailed_standard_category_id)
@@ -101,10 +99,11 @@ cerberus_submission_1$SummaryRemarks # Will be empty since $0 have been incurred
 cerberus_submission_1$WBSElementRemarks <-
     wbs_element_remarks %>% filter(OrderOrLotID %in% c("1_BA"))
 
-
 cerberus_submission_1$WBSDictionaryDefinitions <- wbs_dictionary_definitions_table
 
 cerberus_submission_1$CostHourTagDefinitions # Empty since not using any tags
+
+cerberus_submission_1$Accounts # Will be empty since $0 have been incurred at contract award
 
 # FlexFile Submission 3: Delivery of all First Article Test Vehicles ----------
 
@@ -163,8 +162,6 @@ cerberus_submission_3$EndItems <- end_item_table
 
 cerberus_submission_3$WBS <- wbs_table
 
-cerberus_submission_3$Accounts
-
 cerberus_submission_3$FunctionalCategories <-
     functional_categories_table %>%
     select(-detailed_standard_category_id)
@@ -196,6 +193,12 @@ cerberus_submission_3$WBSElementRemarks <-
 cerberus_submission_3$WBSDictionaryDefinitions <- wbs_dictionary_definitions_table
 
 cerberus_submission_3$CostHourTagDefinitions # Empty since not using any tags
+
+cerberus_submission_3$Accounts$ID <- cerberus_submission_3$ActualCostHourData %>%
+    distinct(AccountID)
+
+cerberus_submission_3$Accounts$Name <- cerberus_submission_3$ActualCostHourData %>%
+    distinct(AccountID)
 
 # FlexFile Submission 5: Complete LRIP Deliveries -----------------------------
 
@@ -255,8 +258,6 @@ cerberus_submission_5$EndItems <- end_item_table
 
 cerberus_submission_5$WBS <- wbs_table
 
-cerberus_submission_5$Accounts
-
 cerberus_submission_5$FunctionalCategories <-
     functional_categories_table %>%
     select(-detailed_standard_category_id)
@@ -289,6 +290,11 @@ cerberus_submission_5$WBSDictionaryDefinitions <- wbs_dictionary_definitions_tab
 
 cerberus_submission_5$CostHourTagDefinitions  # Empty since not using any tags
 
+cerberus_submission_5$Accounts$ID <- cerberus_submission_3$ActualCostHourData %>%
+    distinct(AccountID)
+
+cerberus_submission_5$Accounts$Name <- cerberus_submission_3$ActualCostHourData %>%
+    distinct(AccountID)
 
 # FlexFile Submission 7: Deliveries/Contract Complete -------------------------
 
@@ -351,8 +357,6 @@ cerberus_submission_7$EndItems <- end_item_table
 
 cerberus_submission_7$WBS <- wbs_table
 
-cerberus_submission_7$Accounts
-
 cerberus_submission_7$FunctionalCategories <-
     functional_categories_table %>%
     select(-detailed_standard_category_id)
@@ -382,3 +386,8 @@ cerberus_submission_7$WBSDictionaryDefinitions <- wbs_dictionary_definitions_tab
 
 cerberus_submission_7$CostHourTagDefinitions # Empty since not using any tags
 
+cerberus_submission_7$Accounts$ID <- cerberus_submission_3$ActualCostHourData %>%
+    distinct(AccountID)
+
+cerberus_submission_7$Accounts$Name <- cerberus_submission_3$ActualCostHourData %>%
+    distinct(AccountID)
