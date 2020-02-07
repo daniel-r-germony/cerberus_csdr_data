@@ -26,5 +26,6 @@ source(here::here("R", "material_cost_by_unit.R"))
 source(here::here("R", "rec_hours_calcs.R"))
 source(here::here("R", "nr_hours_calcs.R"))
 source(here::here("R", "ff_comments.R"))
+source(here::here("R", "create_ActualCostHourData.R"))
 source(here::here("R", "create_submissions.R"))
 
