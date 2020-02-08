@@ -1,11 +1,12 @@
 
 # Reminder: Use the "Source" button to run these so that the download requests
 # work correctly.
-
 source(here::here("R", "read_soc_defs.R"))
 source(here::here("R", "read_ose_data.R"))
 source(here::here("R", "define_classes.R"))
 source(here::here("R", "read_flexfile_templates.R"))
+
+# Can run with Run
 source(here::here("R", "distribution_functions.R"))
 source(here::here("R", "wbs_table.R"))
 source(here::here("R", "reporting_calendar_table.R"))
