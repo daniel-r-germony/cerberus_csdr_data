@@ -4,7 +4,7 @@ library(dplyr)
 library(magrittr)
 
 #     $ OrderOrLotID                 <chr> DONE
-#     $ CLIN_ID                      <fct>
+#     $ CLIN_ID                      <fct> Party Done
 #     $ EndItemID                    <chr>
 #     $ WBSElementID                 <chr>
 #     $ AccountID                    <chr> DONE
