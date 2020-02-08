@@ -27,11 +27,6 @@ combined_hours <- bind_rows(nonrecurring_hours, recurring_hours)
 combined_hours <- combined_hours %>%
     mutate(AccountID = ch_credit_card_number(nrow(combined_hours)))
 
-combined_hours %>% mutate(OrderOrLotID = case_when(
-    StartDate >= order_or_lots_table$PeriodOfPerformance_StartDate &&
-    EndDate   <= order_or_lots_table$PeriodOfPerformance_EndDate ~ order_or_lots_table$ID
-))
-
 # TODO: This needs to be refactored with a map function so it will work with an
 # unlimited number of order lots
 reporting_calendar_table_plus <- reporting_calendar_table %>%
@@ -64,4 +59,5 @@ combined_hours <- combined_hours %>%
         data = .,
         col = FunctionalOverheadCategoryID,
         into = c("FunctionalOverheadCategoryID", ".drop"),
-        sep = "-") %>% select(-.drop) %>% print(n = Inf)
+        sep = "-") %>% select(-.drop)
+
