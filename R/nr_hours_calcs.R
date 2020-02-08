@@ -631,6 +631,52 @@ nonrecurring_hours <- bind_rows(
 ) %>% filter(Value_Hours > 0.5,
              Value_Hours < Inf)
 
+rm(
+    hours_executive_nr,
+    hours_sales_nr,
+    hours_ops_mgmr_nr,
+    hours_other_mgmt_nr,
+    hours_biz_ops_nr,
+    hours_finance_nr,
+    hours_eng_cs_nr,
+    hours_eng_math_nr,
+    hours_eng_nr,
+    hours_eng_tech_nr,
+    hours_design_nr,
+    hours_comm_nr,
+    hours_comm_equ_nr,
+    hours_ot_nr,
+    hours_other_heath_nr,
+    hours_sales_super_nr,
+    hours_sales_field_nr,
+    hours_sales_ws_nr,
+    hours_sales_other_nr,
+    hours_office_supers_nr,
+    hours_finance_clerks_nr,
+    hours_other_clerks_nr,
+    hours_record_nr,
+    hours_admin_assistant_nr,
+    hours_other_office_nr,
+    hours_const_supers_nr,
+    hours_const_trade_nr,
+    hours_const_support_nr,
+    hours_const_other_nr,
+    hours_mx_supers_nr,
+    hours_mx_elec_nr,
+    hours_mx_vehicle_nr,
+    hours_mx_other_nr,
+    hours_prod_supers_nr,
+    hours_prod_assembly_nr,
+    hours_prod_welding_nr,
+    hours_prod_paint_nr,
+    hours_prod_ops_nr,
+    hours_prod_other,
+    hours_mat_supers_nr,
+    hours_mx_operators_nr,
+    hours_mat_other_nr,
+    hours_mat_movers_nr
+)
+
 # Join hourly_rate
 nonrecurring_hours <- oes_data %>% select(occ_code, "hourly_rate" = h_mean) %>%
     mutate(hourly_rate = as.numeric(hourly_rate)) %>%
