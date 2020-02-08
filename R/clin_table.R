@@ -35,3 +35,13 @@ clin_table <- clin_table %>%
         TRUE ~ NA_character_
         )
     )
+
+clin_table_plus <- clin_table %>%
+    mutate(OrderOrLotID = case_when(
+        ID %>% str_starts("0") ~ order_or_lots_table$ID[1],
+        ID %>% str_starts("1") ~ order_or_lots_table$ID[2],
+        ID %>% str_starts("2") ~ order_or_lots_table$ID[3],
+        ID %>% str_starts("3") ~ order_or_lots_table$ID[4],
+        ID %>% str_starts("4") ~ order_or_lots_table$ID[5],
+        TRUE ~ NA_character_
+    ))
