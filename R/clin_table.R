@@ -44,4 +44,12 @@ clin_table_plus <- clin_table %>%
         ID %>% str_starts("3") ~ order_or_lots_table$ID[4],
         ID %>% str_starts("4") ~ order_or_lots_table$ID[5],
         TRUE ~ NA_character_
+    )) %>%
+    mutate(EndItemID = case_when(
+        Name == "General Purpose Variant" ~ "Cerberus Tactical Vehicle - General Purpose Variant",
+        Name == "Command & Control Variant" ~ "erberus Tactical Vehicle - Command & Control Variant",
+        Name == "Heavy Weapons Variant" ~ "Cerberus Tactical Vehicle - Heavy Weapons Variant",
+        Name == "Test & Evaluation Support" ~ "Common",
+        Name == "Systems Engineering & Systems Engineering" ~ "Common",
+        TRUE ~ NA_character_
     ))
