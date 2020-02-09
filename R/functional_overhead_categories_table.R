@@ -10,4 +10,8 @@ functional_overhead_categories_table <- oes_data %>%
              into = c("ID", ".drop"),
              sep = "-") %>%
     select(ID, Name = occ_title) %>%
-    mutate(Name = paste0(Name, " Overhead"))
+    mutate(Name = paste0(Name, " Overhead")) %>%
+    bind_rows(c(
+        ID = c("99"),
+        Name = c("Material Overhead")
+    ))
