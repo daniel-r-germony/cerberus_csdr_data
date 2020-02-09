@@ -83,11 +83,12 @@ material_cost <- units_or_sublots %>%
                    ID == "6" ~ 2500 * runif(length(percent_complete), 0.75, 1.35) * length(percent_complete),
                    ID == "7" ~ 1000 * runif(length(percent_complete), 0.75, 1.35) * length(percent_complete),
                    TRUE ~ NA_real_)) %>%
-    pivot_longer(cols = 7:11, names_to = "DetailedStandardCategoryID",values_to = "VALUE_DOLLARS") %>%
-    select(-percent_complete) %>% ungroup() %>% filter(!is.na(VALUE_DOLLARS)) %>%
+    pivot_longer(cols = 7:11, names_to = "DetailedStandardCategoryID",values_to = "VALUE_Dollars") %>%
+    select(-percent_complete) %>% ungroup() %>% filter(!is.na(VALUE_Dollars)) %>%
     mutate(end_item_qty = LastUnitNumber - FirstUnitNumber + 1,
-           unit_cost = VALUE_DOLLARS / end_item_qty,
-           fac_VALUE_DOLLARS = VALUE_DOLLARS * runif(length(VALUE_DOLLARS), 0.95, 1.30))
+           unit_cost = round(VALUE_Dollars / end_item_qty, 2),
+           fac_VALUE_Dollars = round(VALUE_Dollars * runif(length(VALUE_Dollars), 0.95, 1.30), 2),
+           VALUE_Dollars = round(VALUE_Dollars, 2))
 
 # # Creates a table to show the cost by month and DetailedStandardCategoryID
 # material_cost %>%
