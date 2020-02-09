@@ -106,7 +106,11 @@ gp_wbs_distro <- tibble::tribble(
                           "1.1.1.14",                                "Communications",                0,                 0.05,              0,                         0,                               0,
                           "1.1.1.15",                          "CAV Software Release",                0,                    0,              0,                         0,                               0,
                           "1.1.1.16",                           "Other CAV Subsystem",                0,                    0,              0,                         0,                               0
-                     )
+                     ) %>%
+    pivot_longer(cols = -c(1:2),
+                 names_to = "DetailedStandardCategoryID",
+                 values_to = "PercentValue") %>%
+    filter(PercentValue > 0)
 
 c2_wbs_distro <- tibble::tribble(
                                  ~ID,                                           ~Name, ~PURCHASED_PARTS, ~PURCHASED_EQUIPMENT, ~RAW_MATERIALS, ~INTERCOMPANY_WORK_ORDERS, ~DIRECT_REPORTING_SUBCONTRACTOR,
@@ -130,7 +134,11 @@ c2_wbs_distro <- tibble::tribble(
                           "1.1.1.14",                                "Communications",                0,                 0.05,              0,                       0.5,                               0,
                           "1.1.1.15",                          "CAV Software Release",                0,                    0,              0,                         0,                               0,
                           "1.1.1.16",                           "Other CAV Subsystem",                0,                    0,              0,                         0,                               0
-                     )
+                     ) %>%
+    pivot_longer(cols = -c(1:2),
+                 names_to = "DetailedStandardCategoryID",
+                 values_to = "PercentValue") %>%
+    filter(PercentValue > 0)
 
 hw_wbs_distro <- tibble::tribble(
                                  ~ID,                                           ~Name, ~PURCHASED_PARTS, ~PURCHASED_EQUIPMENT, ~RAW_MATERIALS, ~INTERCOMPANY_WORK_ORDERS, ~DIRECT_REPORTING_SUBCONTRACTOR,
@@ -154,4 +162,8 @@ hw_wbs_distro <- tibble::tribble(
                           "1.1.1.14",                                "Communications",                0,                 0.05,              0,                         0,                               0,
                           "1.1.1.15",                          "CAV Software Release",                0,                    0,              0,                         0,                               0,
                           "1.1.1.16",                           "Other CAV Subsystem",                0,                    0,              0,                         0,                               0
-                     )
+                     ) %>%
+    pivot_longer(cols = -c(1:2),
+                 names_to = "DetailedStandardCategoryID",
+                 values_to = "PercentValue") %>%
+    filter(PercentValue > 0)
