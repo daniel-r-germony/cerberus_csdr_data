@@ -3,6 +3,25 @@ library(magrittr)
 library(dplyr)
 library(tidyr)
 
+#     $ OrderOrLotID                 <chr>
+#     $ CLIN_ID                      <fct>
+#     $ EndItemID                    <chr> Done
+#     $ WBSElementID                 <chr>
+#     $ AccountID                    <chr>
+#     $ NonrecurringOrRecurringID    <fct> Done
+#     $ FunctionalCategoryID         <chr>
+#     $ FunctionalOverheadCategoryID <chr>
+#     $ StandardCategoryID           <fct> N/A
+#     $ DetailedStandardCategoryID   <fct> Done
+#     $ UnitOrSublotID               <chr>
+#     $ AllocationMethodID           <chr>
+#     $ ReportingPeriodID            <int>
+#     $ Tag1                         <chr> N/A
+#     $ ...                                N/A
+#     $ Tag25                        <chr> N/A
+#     $ Value_Dollars                <dbl> Done
+#     $ Value_Hours                  <dbl>
+
 material_cost <- units_or_sublots %>%
     group_by(EndItemID, OrderOrLotID) %>%
     mutate(percent_complete = FirstUnitNumber / max(LastUnitNumber)) %>%
@@ -64,17 +83,17 @@ material_cost <- units_or_sublots %>%
                    ID == "6" ~ 2500 * runif(length(percent_complete), 0.75, 1.35) * length(percent_complete),
                    ID == "7" ~ 1000 * runif(length(percent_complete), 0.75, 1.35) * length(percent_complete),
                    TRUE ~ NA_real_)) %>%
-    pivot_longer(cols = 7:11, names_to = "detailed_standard_category_id",values_to = "VALUE_DOLLARS") %>%
+    pivot_longer(cols = 7:11, names_to = "DetailedStandardCategoryID",values_to = "VALUE_DOLLARS") %>%
     select(-percent_complete) %>% ungroup() %>% filter(!is.na(VALUE_DOLLARS)) %>%
     mutate(end_item_qty = LastUnitNumber - FirstUnitNumber + 1,
            unit_cost = VALUE_DOLLARS / end_item_qty,
            fac_VALUE_DOLLARS = VALUE_DOLLARS * runif(length(VALUE_DOLLARS), 0.95, 1.30))
 
-# # Creates a table to show the cost by month and detailed_standard_category_id
+# # Creates a table to show the cost by month and DetailedStandardCategoryID
 # material_cost %>%
 #     ggplot(aes(FirstUnitNumber, VALUE_DOLLARS)) +
-#     geom_col(aes(fill = detailed_standard_category_id)) +
-#     facet_wrap(detailed_standard_category_id ~ EndItemID)
+#     geom_col(aes(fill = DetailedStandardCategoryID)) +
+#     facet_wrap(DetailedStandardCategoryID ~ EndItemID)
 
 # # No idea why I wrote this or what I was looking for.
 # units_or_sublots %>%
@@ -167,3 +186,36 @@ hw_wbs_distro <- tibble::tribble(
                  names_to = "DetailedStandardCategoryID",
                  values_to = "PercentValue") %>%
     filter(PercentValue > 0)
+
+material_cost <- material_cost %>% mutate(NonrecurringOrRecurringID = "RECURRING")
+
+material_cost <- material_cost %>%
+    left_join(clin_table_plus %>% select(CLIN_ID = ID, EndItemID, OrderOrLotID),
+              by = c("OrderOrLotID" = "OrderOrLotID",
+                     "EndItemID" = "EndItemID"))
+
+# This case_when fills in the CLIN_ID for the kits. It has to create a new
+# .CLIN_ID column which is later dropped b/c you can't case_when into a <fct>
+# column. Instead, a <chr> version is created as .CLIN_ID which then replaces
+# the CLIN_ID column but inherits its factor levels.
+material_cost <- material_cost %>% mutate(.CLIN_ID = case_when(
+    EndItemID %in% c("Combat Bumper Kit", "Fording Kit", "Winch Kit") &
+        str_starts(OrderOrLotID, "1") ~
+        "0004",
+    EndItemID %in% c("Combat Bumper Kit", "Fording Kit", "Winch Kit") &
+    str_starts(OrderOrLotID, "2") ~
+        "1004",
+    EndItemID %in% c("Combat Bumper Kit", "Fording Kit", "Winch Kit") &
+    str_starts(OrderOrLotID, "3") ~
+        "2004",
+    EndItemID %in% c("Combat Bumper Kit", "Fording Kit", "Winch Kit") &
+    str_starts(OrderOrLotID, "4") ~
+        "3004",
+    EndItemID %in% c("Combat Bumper Kit", "Fording Kit", "Winch Kit") &
+    str_starts(OrderOrLotID, "5") ~
+        "4004",
+    TRUE ~ as.character(CLIN_ID)
+)) %>% mutate(CLIN_ID = .CLIN_ID %>% factor(levels = levels(material_cost$CLIN_ID))) %>%
+    select(-.CLIN_ID) %>%
+    print(n = Inf)
+
