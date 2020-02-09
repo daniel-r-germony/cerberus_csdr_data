@@ -3,14 +3,14 @@ library(magrittr)
 library(dplyr)
 library(tidyr)
 
-#     $ OrderOrLotID                 <chr>
-#     $ CLIN_ID                      <fct>
+#     $ OrderOrLotID                 <chr> Done
+#     $ CLIN_ID                      <fct> Done
 #     $ EndItemID                    <chr> Done
 #     $ WBSElementID                 <chr>
 #     $ AccountID                    <chr>
 #     $ NonrecurringOrRecurringID    <fct> Done
-#     $ FunctionalCategoryID         <chr>
-#     $ FunctionalOverheadCategoryID <chr>
+#     $ FunctionalCategoryID         <chr> Done
+#     $ FunctionalOverheadCategoryID <chr> Done
 #     $ StandardCategoryID           <fct> N/A
 #     $ DetailedStandardCategoryID   <fct> Done
 #     $ UnitOrSublotID               <chr>
@@ -216,6 +216,14 @@ material_cost <- material_cost %>% mutate(.CLIN_ID = case_when(
         "4004",
     TRUE ~ as.character(CLIN_ID)
 )) %>% mutate(CLIN_ID = .CLIN_ID %>% factor(levels = levels(material_cost$CLIN_ID))) %>%
-    select(-.CLIN_ID) %>%
-    print(n = Inf)
+    select(-.CLIN_ID)
+
+material_cost <- material_cost %>% mutate(FunctionalCategoryID = case_when(
+    DetailedStandardCategoryID == "PURCHASED_PARTS" ~ "99-0002",
+    DetailedStandardCategoryID == "PURCHASED_EQUIPMENT" ~ "99-0003",
+    DetailedStandardCategoryID == "RAW_MATERIALS" ~ "99-0001",
+    DetailedStandardCategoryID == "INTERCOMPANY_WORK_ORDERS" ~ "99-0000",
+    DetailedStandardCategoryID == "DIRECT_REPORTING_SUBCONTRACTOR" ~ "99-0002",
+    TRUE ~ NA_character_
+)) %>% mutate(FunctionalOverheadCategoryID = "99")
 
