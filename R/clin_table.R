@@ -47,7 +47,7 @@ clin_table_plus <- clin_table %>%
     )) %>%
     mutate(EndItemID = case_when(
         Name == "General Purpose Variant" ~ "Cerberus Tactical Vehicle - General Purpose Variant",
-        Name == "Command & Control Variant" ~ "erberus Tactical Vehicle - Command & Control Variant",
+        Name == "Command & Control Variant" ~ "Cerberus Tactical Vehicle - Command & Control Variant",
         Name == "Heavy Weapons Variant" ~ "Cerberus Tactical Vehicle - Heavy Weapons Variant",
         Name == "Test & Evaluation Support" ~ "Common",
         Name == "Systems Engineering & Systems Engineering" ~ "Common",
