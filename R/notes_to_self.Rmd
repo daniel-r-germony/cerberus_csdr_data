@@ -1,0 +1,35 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+```
+
+
+### Material Cost Table
+
+Each row includes the cost of a vehicle at a given `DetailedStandardCategoryID` and by `OrderLotID`.  
+
+```{r}
+material_cost
+```
+
+I thought I would use an allocation table to split those costs by `DetailedStandardCategoryID` into the WBS.  
+
+### Example Allocation Table
+
+Here is an example of one of my allocation tables that is mean to allocate costs by `DetailedStandardCategoryID` to `WBSElementID`. The material unit cost for each vehicle is already different so the unit costs would differ. I think I need to do that math and then not call it an allocation (the way FlexFile) thinks of it.
+
+```{r}
+gp_wbs_distro
+```
+
+### Overheads
+
+Need to figure out how overheads work.
+
+### Labor by Unit
+
+Need to figure out how to map labor costs back to individual units.
