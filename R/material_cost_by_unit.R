@@ -83,16 +83,16 @@ material_cost <- units_or_sublots %>%
                    ID == "6" ~ 2500 * runif(length(percent_complete), 0.75, 1.35) * length(percent_complete),
                    ID == "7" ~ 1000 * runif(length(percent_complete), 0.75, 1.35) * length(percent_complete),
                    TRUE ~ NA_real_)) %>%
-    pivot_longer(cols = 7:11, names_to = "DetailedStandardCategoryID",values_to = "VALUE_Dollars") %>%
-    select(-percent_complete) %>% ungroup() %>% filter(!is.na(VALUE_Dollars)) %>%
+    pivot_longer(cols = 7:11, names_to = "DetailedStandardCategoryID",values_to = "Value_Dollars") %>%
+    select(-percent_complete) %>% ungroup() %>% filter(!is.na(Value_Dollars)) %>%
     mutate(end_item_qty = LastUnitNumber - FirstUnitNumber + 1,
-           unit_cost = round(VALUE_Dollars / end_item_qty, 2),
-           fac_VALUE_Dollars = round(VALUE_Dollars * runif(length(VALUE_Dollars), 0.95, 1.30), 2),
-           VALUE_Dollars = round(VALUE_Dollars, 2))
+           unit_cost = round(Value_Dollars / end_item_qty, 2),
+           fac_Value_Dollars = round(Value_Dollars * runif(length(Value_Dollars), 0.95, 1.30), 2),
+           Value_Dollars = round(Value_Dollars, 2))
 
 # # Creates a table to show the cost by month and DetailedStandardCategoryID
 # material_cost %>%
-#     ggplot(aes(FirstUnitNumber, VALUE_DOLLARS)) +
+#     ggplot(aes(FirstUnitNumber, Value_Dollars)) +
 #     geom_col(aes(fill = DetailedStandardCategoryID)) +
 #     facet_wrap(DetailedStandardCategoryID ~ EndItemID)
 
