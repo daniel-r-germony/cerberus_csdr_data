@@ -329,4 +329,5 @@ material_cost_for_part3 <- material_cost %>%
         NonrecurringOrRecurringID,
         DetailedStandardCategoryID
     ) %>%
-    summarise(Value_Dollars = sum(Value_Dollars))
+    summarise(Value_Dollars = sum(Value_Dollars)) %>%
+    mutate(Value_Hours = NA_real_)
