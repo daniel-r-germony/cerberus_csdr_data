@@ -706,6 +706,6 @@ recurring_hours <- inflation_table %>%
 
 # Create the Value_Dollars column and drop the unneeded columns
 recurring_hours <- recurring_hours %>%
-    mutate("Value_Dollars" = Value_Hours * hourly_rate) %>%
+    mutate("Value_Dollars" = round(Value_Hours * hourly_rate, 2)) %>%
     select(-hourly_rate,
            -inflation_rate)
