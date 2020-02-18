@@ -88,7 +88,7 @@ cerberus_submission_1$SummaryCostData
 
 cerberus_submission_1$ActualCostHourData # Will be empty since $0 have been incurred at contract award
 
-cerberus_submission_1$ForecastAtCompletionCostHourData
+cerberus_submission_1$ForecastAtCompletionCostHourData <- actual_cost_data_for_part_3
 
 cerberus_submission_1$AllocationMethods
 
@@ -274,7 +274,30 @@ cerberus_submission_5$SummaryCostData
 
 cerberus_submission_5$ActualCostHourData
 
-cerberus_submission_5$ForecastAtCompletionCostHourData
+cerberus_submission_5$ForecastAtCompletionCostHourData <- bind_rows(
+    # Bind the actuals to date excluding future OrderLotID with FAC data for
+    # future OrderLotIDs
+    actual_cost_data_for_part_2 %>% filter(!(OrderOrLotID %in% c("4_F1", "5_F2"))) %>%
+        select(
+            OrderOrLotID,
+            WBSElementID,
+            NonrecurringOrRecurringID,
+            StandardCategoryID,
+            DetailedStandardCategoryID,
+            Value_Hours,
+            Value_Dollars
+        ) %>%
+        group_by(
+            OrderOrLotID,
+            WBSElementID,
+            NonrecurringOrRecurringID,
+            StandardCategoryID,
+            DetailedStandardCategoryID
+        ) %>%
+        summarise(Value_Dollars = sum(Value_Dollars),
+                  Value_Hours = sum(Value_Hours)),
+    actual_cost_data_for_part_3 %>% filter(OrderOrLotID %in% c("4_F1", "5_F2"))
+    )
 
 cerberus_submission_5$AllocationMethods
 
@@ -372,7 +395,30 @@ cerberus_submission_7$SummaryCostData
 
 cerberus_submission_7$ActualCostHourData
 
-cerberus_submission_7$ForecastAtCompletionCostHourData
+cerberus_submission_7$ForecastAtCompletionCostHourData <- bind_rows(
+    # Bind the actuals to date excluding future OrderLotID with FAC data for
+    # future OrderLotIDs
+    actual_cost_data_for_part_2 %>% filter(!(OrderOrLotID %in% c("5_F2"))) %>%
+        select(
+            OrderOrLotID,
+            WBSElementID,
+            NonrecurringOrRecurringID,
+            StandardCategoryID,
+            DetailedStandardCategoryID,
+            Value_Hours,
+            Value_Dollars
+        ) %>%
+        group_by(
+            OrderOrLotID,
+            WBSElementID,
+            NonrecurringOrRecurringID,
+            StandardCategoryID,
+            DetailedStandardCategoryID
+        ) %>%
+        summarise(Value_Dollars = sum(Value_Dollars),
+                  Value_Hours = sum(Value_Hours)),
+    actual_cost_data_for_part_3 %>% filter(OrderOrLotID %in% c("5_F2"))
+    )
 
 cerberus_submission_7$AllocationMethods
 
