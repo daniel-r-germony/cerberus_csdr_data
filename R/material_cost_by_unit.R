@@ -7,7 +7,7 @@ library(tidyr)
 #     $ CLIN_ID                      <fct> Done
 #     $ EndItemID                    <chr> Done
 #     $ WBSElementID                 <chr> Done
-#     $ AccountID                    <chr>
+#     $ AccountID                    <chr> Done on create_Actual_CostHourData
 #     $ NonrecurringOrRecurringID    <fct> Done
 #     $ FunctionalCategoryID         <chr> Done
 #     $ FunctionalOverheadCategoryID <chr> Done
@@ -20,7 +20,7 @@ library(tidyr)
 #     $ ...                                N/A
 #     $ Tag25                        <chr> N/A
 #     $ Value_Dollars                <dbl> Done
-#     $ Value_Hours                  <dbl>
+#     $ Value_Hours                  <dbl> Done on create_Actual_CostHourData
 
 material_cost <- units_or_sublots %>%
     group_by(EndItemID, OrderOrLotID) %>%

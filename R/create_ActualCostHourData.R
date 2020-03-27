@@ -179,7 +179,6 @@ actual_cost_data_for_part_3 <-
     bind_rows(combined_hours_for_part_3, material_cost_for_part3) %>%
     arrange(OrderOrLotID, WBSElementID)
 
-
 actual_cost_data_for_part_2 %>% filter(OrderOrLotID != "5_F2") %>%
     select(
         OrderOrLotID,
